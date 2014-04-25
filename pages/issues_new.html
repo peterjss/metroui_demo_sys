@@ -1,0 +1,1207 @@
+<style>
+    .well .form-actions {
+        margin-bottom: -13px;
+        margin-left: -19px;
+        margin-right: -19px;
+    }
+    .radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
+        margin-left: 0px;
+    }
+
+    .jarviswidget.well .smart-form header {
+        display: block;
+    }
+
+    .smart-form .popover{
+        /*padding: 1px; !important*/
+        top:0;
+    }
+    .smart-form .popover-title {
+        background-color: #F7F7F7;
+        border-bottom: 1px solid #EBEBEB;
+        border-radius: 5px 5px 0 0;
+        font-size: 13px;
+        font-weight: normal;
+        line-height: 18px;
+        margin: 0;
+        padding: 8px 14px;
+    }
+
+
+    .smart-form .popover-content {
+        padding: 9px 14px;
+    }
+
+    .btn {
+        padding: 5.7px 12px;
+    }
+    /*.ad-container table {*/
+        /*background-color: #FFFFFF;*/
+    /*}*/
+    /*.table-noborder, .table-noborder >tbody > tr, .table-noborder >tbody > tr > td {*/
+        /*border-top: 0px solid #ddd;*/
+    /*}*/
+</style>
+<style>
+    .tile ul {
+        border-bottom: 0px solid #423F3F;
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3);
+        list-style: none outside none;
+        margin: 0;
+        padding: 0px 0px 10px 0px;
+    }
+
+    .tile ul li {
+        display: inline-block;
+        width: auto;
+    }
+
+    .tile ul li .jarvismetro-tile {
+        border: 0 none;
+        border-radius: 0;
+        margin: 0 3px 3px;
+    }
+
+    .tile ul li .jarvismetro-tile:hover {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    .tile ul li .jarvismetro-tile:active, .tile ul li .jarvismetro-tile:focus {
+        left: 0;
+        top: 0;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    .tile ul .fa-2x {
+        font-size: 1.5em;
+    }
+
+
+    .alert .tile ul {
+        border-bottom: 0 solid #423F3F;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+        list-style: none outside none;
+        margin: 0;
+        padding: 0px;
+    }
+
+    .alert .jarvismetro-tile {
+        box-shadow: 0 0 1px #FFFFCC inset;
+        height: 60px;
+    }
+</style>
+<!-- row -->
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="alert alert-block alert-info">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <!--<a class="close" href="#" data-dismiss="alert">×</a>-->
+                    <h4 class="alert-heading">
+                        <i class="fa fa-check-square-o"></i>
+                       请先选择缺陷的类型!
+                    </h4>
+                    <p> 缺陷的类型将决定下面缺陷的信息内容，不同的类型拥有不同的信息输入位置，请慎重选择! </p>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right tile">
+                    <ul class="">
+                        <li>
+                            <a href="javascript:void(0);" class="jarvismetro-tile  bg-color-purple selected">
+                                <span class="iconbox">
+                                    <i class="fa fa-2x ">卡产品</i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="jarvismetro-tile  bg-color-green">
+                                <span class="iconbox">
+                                    <i class="fa fa-2x ">系统产品</i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="jarvismetro-tile  bg-color-blue">
+                                <span class="iconbox">
+                                    <i class="fa fa-2x ">终端产品</i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="jarvismetro-tile  bg-color-orange">
+                            <span class="iconbox">
+                                <i class="fa fa-2x">白盒</i>
+                            </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!--<button class="btn btn-success btn-circle btn-lg"><i class="fa fa-check"></i>黑盒 </button>-->
+                    <!--<button class="btn btn-info btn-circle btn-lg"> <i class="fa fa-check"></i>白盒 </button>-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- widget grid -->
+    <section  class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+        <!-- Widget ID (each widget will need unique ID)-->
+        <div class="jarviswidget" id="wid-id-1" data-widget-colorbutton="false" data-widget-editbutton="false"
+             data-widget-fullscreenbutton="false" data-widget-deletebutton="false">
+        <!-- widget options:
+            usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+            data-widget-colorbutton="false"
+            data-widget-editbutton="false"
+            data-widget-togglebutton="false"
+            data-widget-deletebutton="false"
+            data-widget-fullscreenbutton="false"
+            data-widget-custombutton="false"
+            data-widget-collapsed="true"
+            data-widget-sortable="false"
+        -->
+
+
+        <header>
+            <h2>
+                <strong>新建缺陷</strong>
+                <span class="hidden-mobile hidden-tablet"> - 项目信息</span>
+            </h2>
+            <!--<ul id="widget-tab-1" class="nav nav-tabs pull-right">-->
+                <!--<li class="active">-->
+                    <!--<a data-toggle="tab" href="#hr1">-->
+                        <!--<i class="fa fa-lg fa-credit-card "></i> <span class="hidden-mobile hidden-tablet"> 卡产品 </span>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a data-toggle="tab" href="#hr2">-->
+                        <!--<i class="fa fa-lg fa-sitemap "></i> <span class="hidden-mobile hidden-tablet"> 系统产品 </span>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a data-toggle="tab" href="#hr3">-->
+                        <!--<i class="fa fa-lg fa-laptop "></i> <span class="hidden-mobile hidden-tablet"> 终端产品 </span>-->
+                    <!--</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        </header>
+
+        <!-- widget div-->
+        <div>
+            <!-- widget edit box -->
+            <div class="jarviswidget-editbox">
+                <!-- This area used as dropdown edit box -->
+            </div>
+            <!-- end widget edit box -->
+
+            <!-- widget content -->
+            <div class="widget-body">
+                <!--<div class="tab-content padding-10">-->
+                    <!--<div class="tab-pane fade in active" id="hr1">-->
+                        <fieldset>
+                            <!--<legend>-->
+                            <!--项目信息-->
+                            <!--</legend>-->
+                            <div class="row">
+                                <div class="col-sm-6 tile">
+                                    <div class="form-group">
+                                        <label>项目名称</label>
+                                        <select style="width:100%" class="select2">
+                                            <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                <option value="AK">Alaska</option>
+                                                <option value="HI">Hawaii</option>
+                                            </optgroup>
+                                        </select>
+                                        <div class=" note">您可以点击右侧的显示全部信息按钮来完全展开项目信息的内容。</div>
+                                    </div>
+                                    <!--<ul class="pull-left">-->
+                                        <!--<li>-->
+                                            <!--<a href="#" class="jarvismetro-tile  bg-color-purple selected">-->
+                                        <!--<span class="iconbox ">-->
+                                            <!--<i class="fa fa-2x">卡产品</i>-->
+                                        <!--</span>-->
+                                            <!--</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="#" class="jarvismetro-tile bg-color-blue">-->
+                                        <!--<span class="iconbox">-->
+                                            <!--<i class="fa fa-2x">系统产品</i> <span>系统产品 </span>-->
+                                        <!--</span>-->
+                                            <!--</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="#" class="jarvismetro-tile  bg-color-green">-->
+                                        <!--<span class="iconbox">-->
+                                            <!--<i class="fa fa-2x">终端产品</i> <span>终端产品 </span>-->
+                                        <!--</span>-->
+                                            <!--</a>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>产品名称</label>
+                                        <input type="email" name="email" class="form-control" placeholder="需求编号" data-mask="(999) 999-9999"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label>项目类型</label>
+                                        <select style="width:100%" class="select2">
+                                            <option value="A">新产品</option>
+                                            <option value="B">需求升级</option>
+                                            <option value="C">COS升级</option>
+                                            <option value="D">应用升级</option>
+                                            <option value="E">个人化升级</option>
+                                            <option value="F">二次个人化</option>
+                                            <option value="G">平台转移</option>
+                                            <option value="H">设备转移</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-6">
+
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+                        <div id="project_add_content" style="display:none;">
+                            <hr style="margin: 0 0 10px 0;">
+                            <fieldset >
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label>需求编号</label>
+                                            <input type="email" name="email" class="form-control" placeholder="需求编号" data-mask="(999) 999-9999"/>
+                                        </div>
+                                    </div>
+                                    <div class="col col-sm-6">
+                                        <div class="form-group">
+                                            <label>芯片型号</label>
+                                            <input type="email" name="email" class="form-control" placeholder="芯片型号" data-mask="(999) 999-9999"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-sm-6">
+                                        <div class="form-group">
+                                            <label>COS版本</label>
+                                            <input type="email" name="email" class="form-control" placeholder="COS版本" />
+                                        </div>
+                                    </div>
+                                    <div class="col col-sm-6">
+                                        <div class="form-group">
+                                            <label>生产程序</label>
+                                            <input type="email" name="email" class="form-control" placeholder="生产程序" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-sm-6">
+                                        <div class="form-group">
+                                            <label>COS开发者</label>
+                                            <select style="width:100%" class="select2">
+                                                <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                    <option value="AK">Alaska</option>
+                                                    <option value="HI">Hawaii</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <section class="col col-sm-6">
+                                        <div class="form-group">
+                                            <label >生产设备</label>
+                                            <input type="email" name="email" class="form-control" placeholder="生产设备" />
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-sm-6">
+                                        <div class="form-group">
+                                            <label>个人化开发者</label>
+                                            <select style="width:100%" class="select2">
+                                                <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                    <option value="AK">Alaska</option>
+                                                    <option value="HI">Hawaii</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </section>
+                                    <section class="col col-sm-6">
+                                        <div class="form-group">
+                                            <label>应用开发者</label>
+                                            <select style="width:100%" class="select2">
+                                                <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                    <option value="AK">Alaska</option>
+                                                    <option value="HI">Hawaii</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="row">
+                                    <section class="col col-sm-6">
+                                        <div class="form-group">
+                                            <label >用例设计者</label>
+                                            <select style="width:100%" class="select2">
+                                                <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                    <option value="AK">Alaska</option>
+                                                    <option value="HI">Hawaii</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </section>
+                                    <section class="col col-sm-6">
+                                        <div class="form-group">
+                                            <label>测试执行者</label>
+                                            <select style="width:100%" class="select2">
+                                                <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                    <option value="AK">Alaska</option>
+                                                    <option value="HI">Hawaii</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </section>
+                                </div>
+                            </fieldset>
+                            <!--<div class="pull-right txt-color-blue">-->
+                            <!--<i class="fa fa-chevron-up "></i> <a id="closeProjectForm" href="javascript:void(0);">收起</a></div>-->
+                            <!--<br>-->
+
+                        </div>
+                    <!--</div>-->
+                    <!--<div class="tab-pane fade in" id="hr2">-->
+                    <!--</div>-->
+                    <!--<div class="tab-pane fade in" id="hr3">-->
+                    <!--</div>-->
+                    <!--</div>  -->
+
+
+                <!-- widget footer -->
+                <div class="widget-footer text-right">
+
+                    <span class="onoffswitch-title">
+                        <i class="fa fa-eye "></i> 显示全部信息
+                    </span>
+                    <span class="onoffswitch">
+                        <input id="myonoffswitch" class="onoffswitch-checkbox" type="checkbox" name="onoffswitch">
+                        <label class="onoffswitch-label" for="myonoffswitch">
+                            <span class="onoffswitch-inner" data-swchoff-text="NO" data-swchon-text="YES"></span>
+                            <span class="onoffswitch-switch"></span>
+                        </label>
+                    </span>
+
+                </div>
+                <!-- end widget footer -->
+
+            </div>
+            <!-- end widget content -->
+
+            </div>
+            <!-- end widget div -->
+
+        </div>
+        <!-- end widget -->
+    </section>
+
+</div>
+<!-- end row -->
+
+
+<!-- row -->
+<div class="row">
+<article class="col-sm-12 col-md-12 col-lg-12 sortable-grid ui-sortable">
+<!-- Widget ID (each widget will need unique ID)-->
+<div class="jarviswidget well" id="wid-id-3" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false" data-widget-sortable="false">
+<!-- widget options:
+usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+data-widget-colorbutton="false"
+data-widget-editbutton="false"
+data-widget-togglebutton="false"
+data-widget-deletebutton="false"
+data-widget-fullscreenbutton="false"
+data-widget-custombutton="false"
+data-widget-collapsed="true"
+data-widget-sortable="false"
+
+-->
+<header>
+    <!--<span class="widget-icon"> <i class="fa fa-comments"></i> </span>-->
+    <!--<h2>Default Tabs with border </h2>-->
+
+</header>
+
+<!-- widget div-->
+<div>
+<!-- widget edit box -->
+<div class="jarviswidget-editbox">
+    <!-- This area used as dropdown edit box -->
+
+</div>
+<!-- end widget edit box -->
+
+<!-- widget content -->
+<div class="widget-body widget-hide-overflow">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+            <span class="font-md text-primary" >缺陷信息</span>
+        </div>
+    </div>
+
+    <hr class="simple">
+
+    <form action="" id="checkout-form" class="" novalidate="novalidate">
+        <!--row-->
+        <div class="row">
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 tile">
+
+               <!--<span class="txt-color-red">*</span> 请选择一种缺陷的类别。-->
+                <!--<ul class="pull-right">-->
+                    <!--<li>-->
+                        <!--<a href="#" class="jarvismetro-tile  bg-color-purple selected">-->
+                        <!--<span class="iconbox ">-->
+                            <!--<i class="fa fa-2x">卡产品</i>-->
+                        <!--</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#" class="jarvismetro-tile  bg-color-orange">-->
+                        <!--<span class="iconbox">-->
+                            <!--<i class="fa fa-2x">系统产品</i> <span>系统产品 </span>-->
+                        <!--</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="#" class="jarvismetro-tile  bg-color-green">-->
+                        <!--<span class="iconbox">-->
+                            <!--<i class="fa fa-2x">终端产品</i> <span>终端产品 </span>-->
+                        <!--</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+                <!--<div class="clearfix"></div>-->
+
+                <fieldset>
+                    <div class="form-group">
+                        <label>概述</label>
+                        <div class="input-icon-right">
+                            <input type="text" name="fname" class="form-control ">
+                            <!--<i class="fa fa-comment "></i>-->
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class=" control-label"> 优先级</label>
+                                <select style="width:100%" class="select2">
+                                    <option value="PT" selected="selected">严重</option>
+                                    <option value="WD">重要</option>
+                                    <option value="VS">一般</option>
+                                    <option value="VS">不重要</option>
+                                    <option value="VS">微小</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class=" control-label"> 截止日期</label>
+                                <div class="input-group">
+                                    <input type="text" name="mydate"
+                                           class="form-control datepicker" data-dateformat="yy-mm-dd">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label class=" control-label"> 影响版本 </label>
+
+                                    <select style="width:100%" class="select2">
+                                        <option value="PT">0.1</option>
+                                        <option value="WD">1</option>
+                                        <option value="VS">1</option>
+                                        <option value="VS">3</option>
+                                        <option value="VS">4</option>
+                                    </select>
+
+                                    <div class="note">
+                                        输入版本可以获得下拉匹配列表，或者直接打开下拉菜单来进行选择。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class=" control-label"> 修复版本 </label>
+                                <select style="width:100%" class="select2">
+                                    <option value="PT">0.1</option>
+                                    <option value="WD">1</option>
+                                    <option value="VS">1</option>
+                                    <option value="VS">3</option>
+                                    <option value="VS">4</option>
+                                </select>
+
+                                <div class="note">
+                                    输入版本可以获得下拉匹配列表，或者直接打开下拉菜单来进行选择。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label class=" control-label"> 分配给</label>
+
+                        <select style="width:100%" class="select2">
+                            <optgroup label="ZH/iASPEC">
+                                <option value="PT">Peter Li</option>
+                                <option value="WD">Wade</option>
+                                <option value="VS">Varson</option>
+                            </optgroup>
+                            <optgroup label="HK">
+                                <option value="CA">Fu</option>
+                                <option value="NV">Richard</option>
+                                <option value="OR">Kevin</option>
+                                <option value="WA">Ams</option>
+                            </optgroup>
+                            <optgroup label="NanH">
+                                <option value="AZ">Jak</option>
+                            </optgroup>
+                        </select>
+                        <a href="#">分配给我</a>
+                    </div>
+                    <div class="form-group">
+                        <label class=" control-label"> 提交者</label>
+                        <select style="width:100%" class="select2">
+                            <optgroup label="ZH/iASPEC">
+                                <option value="PT" selected="selected">Peter Li</option>
+                                <option value="WD">Wade</option>
+                                <option value="VS">Varson</option>
+                            </optgroup>
+                            <optgroup label="HK">
+                                <option value="CA">Fu</option>
+                                <option value="NV">Richard</option>
+                                <option value="OR">Kevin</option>
+                                <option value="WA">Ams</option>
+                            </optgroup>
+                            <optgroup label="NanH">
+                                <option value="AZ">Jak</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class=" control-label"> 环境</label>
+                        <textarea class="form-control" rows="4" style="resize: none;"></textarea>
+
+                        <div class="note">
+                            例如 操作系统，软件平台，特殊硬件使用等。
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class=" control-label"> 描述 </label>
+                        <textarea name="ckeditor" class="form-control" rows="6"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class=" control-label"> 最初估算 </label>
+                                <div class="input-icon-right">
+                                    <input type="text" class="form-control"/>
+                                    <i class="fa  fa-clock-o"></i>
+                                </div>
+
+                                <div class="note">
+                                    对参与这个缺陷所花费的时间做一个初步估算。
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class=" control-label"> 仍需估算 </label>
+                                <div class="input-icon-right">
+                                    <input type="text" class="form-control"/>
+                                    <i class="fa  fa-clock-o"></i>
+                                </div>
+                                <div class="note">
+                                    对这个缺陷还需要花费的时间做一个估算。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+                <div><h3>已选关键字 <small>- 可通过右侧按钮选择关键字，或直接在下面列表框中选择。</small></h3>
+                </div>
+
+                <div class="chat-body no-padding profile-message">
+                    <table class="table table-hover table-noborder">
+                        <tbody>
+                        <tr>
+                            <td width="80">部门</td>
+                            <td >
+                                <select multiple style="width:100%" class="select2">
+                                    <optgroup label="Eastern Time Zone">
+                                        <option value="1" selected="selected">COS一部</option>
+                                        <option value="2" selected="selected">COS二部</option>
+                                        <option value="3" selected="selected">应用开发</option>
+                                        <option value="4" selected="selected">个人化中心</option>
+                                        <option value="5" selected="selected">技术拓展部</option>
+                                        <option value="6" >国际部技术组</option>
+                                        <option value="7" >产品部</option>
+                                        <option value="8" >增值业务部</option>
+                                        <option value="9" >测试组</option>
+                                        <option value="10" >客户</option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60">故障分类</td>
+                            <td >
+                                <select multiple style="width:100%" class="select2">
+                                    <optgroup label="Eastern Time Zone">
+                                        <option value="1" selected="selected">功能缺陷</option>
+                                        <option value="2" selected="selected">性能缺陷</option>
+                                        <option value="3" selected="selected">安全缺陷</option>
+                                        <option value="4" selected="selected">稳定性</option>
+                                        <option value="5" >兼容性</option>
+                                        <option value="6" >物理</option>
+                                        <option value="7" >需求缺陷</option>
+                                        <option value="8" >COS缺陷</option>
+                                        <option value="9" >文件系统</option>
+                                        <option value="10" >应用缺陷</option>
+                                    </optgroup>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60">产品分类</td>
+                            <td >
+                                <select multiple style="width:100%" class="select2">
+                                    <option value="1" selected="selected">电信</option>
+                                    <option value="2" selected="selected">金融</option>
+                                    <option value="3" selected="selected">社保</option>
+                                    <option value="4" selected="selected">一卡通</option>
+                                    <option value="5" >建设事业</option>
+                                    <option value="6" >健康卡</option>
+                                    <option value="7" >移动支付</option>
+                                </select>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!--<span>增加新标签</span>-->
+                <!--<div class="alert alert-info">-->
+                    <!--可以通过下面的输入框来创建新的标签-->
+                <!--</div>-->
+                <div class="alert alert-info fade in">
+                    <button class="close" data-dismiss="alert"> × </button>
+                    <i class="fa-fw fa fa-info"></i>
+                    <strong>提示!</strong>
+                    可以通过下面的输入框来创建新的标签。
+                </div>
+
+                <div class="well well-sm text-info " >
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control col-6" placeholder="标签类别">
+                            <!--<select  style="width:100%" class="select2">-->
+                                <!--<option value="1">部门</option>-->
+                                <!--<option value="2">故障分类</option>-->
+                                <!--<option value="3">产品分类</option>-->
+                            <!--</select>-->
+                        </div>
+                        <div class="col-sm-5">
+
+                            <div class="input-group">
+                                <input type="text" class="form-control col-6" placeholder="标签内容">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-primary" type="button"><i class="fa fa-check "></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>附件</h3>
+                    <hr>
+                </div>
+
+                <fieldset>
+                    <div class="row">
+                        <div class="smart-form col-sm-6">
+                            <!--<input type="file" class="btn btn-default"/>-->
+                            <label class="input input-file" for="file">
+                                <div class="button">
+                                    <input id="file-upload" type="file"  name="file">
+                                    Browse
+                                </div>
+                                <input type="text" readonly="" placeholder="选择文件...">
+                            </label>
+
+                            <div class="note">
+                                最大上传文件大小为 10.00 MB
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <br>
+
+                <div class="chat-body no-padding profile-message">
+                    <table class="table table-hover table-noborder">
+                        <tbody>
+                        <tr>
+                            <td><a href="#">test.doc</a></td>
+                            <td width="100">20 KB</td>
+                            <td width="160">2014年 1月2日</td>
+                            <td width="20"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);">Design Plan.doc</a></td>
+                            <td width="100">10 MB</td>
+                            <td width="160">5分钟前</td>
+                            <td width="20"><a href="javascript:void(0);"><i class="fa fa-trash-o"></i></a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <hr>
+                <div class="pull-right">
+
+                    <a href="javascript:void(0);"  class="btn btn-primary"><i class="fa fa-save"></i> 保存</a>&nbsp;&nbsp;
+                    <a href="javascript:void(0);"  class="btn btn-default">取消</a>
+
+                </div>
+
+            </div>
+        </div>
+        <!--end row-->
+    </form>
+
+    <!-- SEARCH CONTAINER -->
+    <div class="ad-container hidden-xs">
+        <span class="chat-list-open-close"><i class="fa fa-tag txt-color-blue"></i></span>
+
+        <div class="chat-list-body custom-scroll">
+
+            <div class=" no-padding profile-message">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <br>
+                    <h4> 为缺陷设定标签</h4>
+                    <br>
+                    <table class="table table-hover table-noborder">
+                        <tbody>
+                        <tr>
+                            <td width="80">部门</td>
+                            <td>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>COS一部</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>COS二部</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>应用开发</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>个人化中心</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>技术拓展部</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>国际部技术组</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>产品部</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>增值业务部</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>测试组</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>客户</span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="80">项目类别</td>
+                            <td>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>平台项目</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>产品项目</span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="80">产品分类</td>
+                            <td>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>电信</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>金融</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>社保</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>一卡通</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>建设事业</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>健康卡</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>移动支付</span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="80">平台分类</td>
+                            <td>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>Native</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>JAVA</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>GP</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>N3</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>M1</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>系统</span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="80">技术分类</td>
+                            <td>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>电气特性</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>接触协议</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>非接协议</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>天线</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>USB协议</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>SWP协议</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>HCI API</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>BIP</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>Https协议</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>CAP-TP</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>GMS</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>CDMA</span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="80">故障分类</td>
+                            <td>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>功能缺陷</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>性能缺陷</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>安全缺陷</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>稳定性</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>兼容性</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>物理</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>需求缺陷</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>COS缺陷</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>文件系统</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>应用缺陷</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>个人化</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>芯片</span>
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" class="checkbox style-0">
+                                    <span>终端</span>
+                                </label>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class="chat-list-footer ">
+            <div class="pull-right">
+                <a href="javascript:void(0);" id="chooseLable" class="btn btn-success"><i class="fa fa-check"></i> 确定</a>
+                <a href="javascript:void(0);" id="cancleChooseLable" class="btn btn-default"><i class="fa fa-rotate-left "></i> 取消</a>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+<!-- end widget content -->
+</div>
+<!-- end widget div -->
+</div>
+<!-- end widget -->
+</article>
+
+</div>
+<!-- end row -->
+
+
+
+<script type="text/javascript">
+
+// DO NOT REMOVE : GLOBAL FUNCTIONS!
+pageSetUp();
+
+loadScript("js/plugin/bootstrap-wizard/jquery.bootstrap.wizard.min.js", runBootstrapWizard);
+function runBootstrapWizard() {
+
+    $('#bootstrap-wizard-1').bootstrapWizard({
+        'tabClass': 'form-wizard',
+        'onNext': function (tab, navigation, index) {
+            var $valid = $("#wizard-1").valid();
+            if (!$valid) {
+                $validator.focusInvalid();
+                return false;
+            } else {
+                $('#bootstrap-wizard-1').find('.form-wizard').children('li').eq(index - 1).addClass(
+                        'complete');
+                $('#bootstrap-wizard-1').find('.form-wizard').children('li').eq(index - 1).find('.step')
+                        .html('<i class="fa fa-check"></i>');
+            }
+        }
+    });
+}
+
+
+/*
+ * Load fuelux wizard dependency
+ */
+loadScript("js/plugin/fuelux/wizard/wizard.js", fueluxWizard);
+
+function fueluxWizard() {
+
+    var wizard = $('.wizard').wizard();
+
+    wizard.on('finished', function (e, data) {
+        //$("#fuelux-wizard").submit();
+        //console.log("submitted!");
+        $.smallBox({
+            title: "Congratulations! Your form was submitted",
+            content: "<i class='fa fa-clock-o'></i> <i>1 seconds ago...</i>",
+            color: "#5F895F",
+            iconSmall: "fa fa-check bounce animated",
+            timeout: 4000
+        });
+
+    });
+
+}
+// PAGE RELATED SCRIPTS
+loadScript("js/plugin/dropzone/dropzone.min.js", startDropzone);
+
+function startDropzone (){
+
+    Dropzone.autoDiscover = false;
+    $("#mydropzone").dropzone({
+        //url: "/file/post",
+        addRemoveLinks : true,
+        maxFilesize: 0.5,
+        dictResponseError: 'Error uploading file!'
+    });
+}
+
+loadScript("js/plugin/ckeditor/ckeditor.js", ckeditorStart);
+
+function ckeditorStart() {
+    CKEDITOR.replace( 'ckeditor', {
+        toolbar : 'Standard',
+        height: '150px',
+        startupFocus : false
+    });
+}
+
+
+$.chat_list_btn = $('.ad-container > .chat-list-open-close');
+$.chat_body = $('#chat-body');
+
+// open chat list
+$.chat_list_btn.click(function () {
+    $(this).parent('.ad-container').toggleClass('open');
+});
+
+$('#chooseLable, #cancleChooseLable').click(function (e) {
+    $('.ad-container').toggleClass('open');
+    e.preventDefault();
+});
+
+$('#myonoffswitch').click(function (e) {
+    var $btn_add_project = $("#project_add_content");
+
+    $btn_add_project.slideToggle(function(){
+        console.log($btn_add_project.is(':visible'));
+        if($btn_add_project.is(':visible')){
+            $('#myonoffswitch').attr('checked',true);
+        }else
+        {
+            $('#myonoffswitch').attr('checked',false);
+        }
+    });
+});
+
+$('#file-upload').change(function(e){
+//   alert('aa');
+//   alert($(this).parent().html());
+   $(this).parent().next().val($(this).val());
+//       this.parentNode.nextSibling.value = this.value
+   e.preventDefault();
+});
+</script>
+
+<!-- Your GOOGLE ANALYTICS CODE Below -->
+<script type="text/javascript">
+    //			var _gaq = _gaq || [];
+    //				_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+    //				_gaq.push(['_trackPageview']);
+    //
+    //			(function() {
+    //				var ga = document.createElement('script');
+    //				ga.type = 'text/javascript';
+    //				ga.async = true;
+    //				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    //				var s = document.getElementsByTagName('script')[0];
+    //				s.parentNode.insertBefore(ga, s);
+    //			})();
+
+</script>
+
+</body>
+
+</html>

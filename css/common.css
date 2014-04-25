@@ -1,0 +1,109 @@
+.App.Managed .ContentLeft {
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+
+.t_body .t_sbgc {
+    background-color: #F3F3F3;
+}
+
+.ContentLeft {
+    -moz-user-select: none !important;
+}
+
+.ContentLeft {
+    margin-right: 5px;
+    width: 180px;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    /*top: 0;*/
+    top: 2.85em;
+    z-index: 3;
+}
+
+.t_qtc, .t_qtc:hover, .t_qtc:visited, .mlRd .t_estc {
+    color: #444444;
+}
+
+.c_ms {
+    /*border-color: #FFFFFF;*/
+}
+
+.c_ms {
+    border-left: 1px solid #ffffff;
+    display: inline-block;
+    height: 20px;
+    margin: 0;
+    opacity: 0.65;
+    top: 15px;
+    visibility: visible;
+
+    width: 1px;
+    float: left;
+
+    position: relative;
+}
+
+#c_clogoc {
+    margin-left: 1px;
+    padding-left: 2px;
+    padding-right: 3px;
+    position: relative;
+    visibility: visible;
+    width: 23px;
+}
+
+.is_img {
+    margin-left: 3px;
+}
+
+img.sort_right {
+    background-image: url(../img/icons/c5.png);
+    background-position: 103px 115px;
+    width: 9px;
+    height: 11px;
+}
+
+img.sort_down_white {
+    background-image: url(../img/icons/c5.png);
+    background-position: -92px -33px;
+    width: 11px;
+    height: 9px;
+}
+
+img.sort_down {
+    background-image: url(../img/icons/c5.png);
+    background-position: 184px 114px;
+    width: 9px;
+    height: 11px;
+}
+
+.metro .accordion > .accordion-frame {
+    border: 0px solid #EAEAEA;
+}
+
+.content {
+    bottom: 0;
+    left: 0;
+    /*min-width: 768px;*/
+    overflow: hidden;
+    /*position: absolute;*/
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.metro .dropdown-toggle:after {
+    bottom: 0;
+    content: "";
+    font-family: metroSysIcons;
+    font-size: 0.7em;
+    margin-left: 0.45em;
+    position: absolute;
+}

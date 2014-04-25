@@ -1,0 +1,293 @@
+<style>
+    .well .form-actions {
+        margin-bottom: -13px;
+        margin-left: -19px;
+        margin-right: -19px;
+    }
+    .radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
+        margin-left: 0px;
+    }
+
+    .jarviswidget.well .smart-form header {
+        display: block;
+    }
+
+    .smart-form .popover{
+        /*padding: 1px; !important*/
+        top:0;
+    }
+    .smart-form .popover-title {
+        background-color: #F7F7F7;
+        border-bottom: 1px solid #EBEBEB;
+        border-radius: 5px 5px 0 0;
+        font-size: 13px;
+        font-weight: normal;
+        line-height: 18px;
+        margin: 0;
+        padding: 8px 14px;
+    }
+
+
+    .smart-form .popover-content {
+        padding: 9px 14px;
+    }
+
+    .btn {
+        padding: 5.7px 12px;
+    }
+    /*.ad-container table {*/
+        /*background-color: #FFFFFF;*/
+    /*}*/
+    /*.table-noborder, .table-noborder >tbody > tr, .table-noborder >tbody > tr > td {*/
+        /*border-top: 0px solid #ddd;*/
+    /*}*/
+</style>
+<style>
+    .tile ul {
+        border-bottom: 0px solid #423F3F;
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3);
+        list-style: none outside none;
+        margin: 0;
+        padding: 0px 0px 10px 0px;
+    }
+
+    .tile ul li {
+        display: inline-block;
+        width: auto;
+    }
+
+    .tile ul li .jarvismetro-tile {
+        border: 0 none;
+        border-radius: 0;
+        margin: 0 3px 3px;
+    }
+
+    .tile ul li .jarvismetro-tile:hover {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+    .tile ul li .jarvismetro-tile:active, .tile ul li .jarvismetro-tile:focus {
+        left: 0;
+        top: 0;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    .tile ul .fa-2x {
+        font-size: 1.5em;
+    }
+
+
+    .alert .tile ul {
+        border-bottom: 0 solid #423F3F;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+        list-style: none outside none;
+        margin: 0;
+        padding: 0px;
+    }
+
+    .alert .jarvismetro-tile {
+        box-shadow: 0 0 1px #FFFFCC inset;
+        height: 60px;
+    }
+</style>
+
+<!-- row -->
+<div class="row">
+<article class="col-sm-12 col-md-12 col-lg-12 sortable-grid ui-sortable">
+<!-- Widget ID (each widget will need unique ID)-->
+<div class="jarviswidget well" id="wid-id-3" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false" data-widget-sortable="false">
+<!-- widget options:
+usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+data-widget-colorbutton="false"
+data-widget-editbutton="false"
+data-widget-togglebutton="false"
+data-widget-deletebutton="false"
+data-widget-fullscreenbutton="false"
+data-widget-custombutton="false"
+data-widget-collapsed="true"
+data-widget-sortable="false"
+
+-->
+<header>
+    <!--<span class="widget-icon"> <i class="fa fa-comments"></i> </span>-->
+    <!--<h2>Default Tabs with border </h2>-->
+
+</header>
+
+<!-- widget div-->
+<div>
+<!-- widget edit box -->
+<div class="jarviswidget-editbox">
+    <!-- This area used as dropdown edit box -->
+
+</div>
+<!-- end widget edit box -->
+
+<!-- widget content -->
+<div class="widget-body ">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+            <span class="font-md text-primary" >新建 SMTP 邮件服务</span>
+        </div>
+    </div>
+
+    <hr class="simple">
+        <!--row-->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <div id="div_test_connection" class="alert alert-success" style="display: none;">
+                    <i class="fa fa-check-circle-o "></i>
+                    Email 服务器连接测试成功。
+                </div>
+
+                <form action="" id="checkout-form" class="form-horizontal" novalidate="novalidate">
+                <fieldset>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">名字</label>
+                        <div class="col-md-10 input-icon-right">
+                            <input type="text" name="fname" class="form-control " value="Ecp email server">
+                            <!--<i class="fa fa-comment "></i>-->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">备注</label>
+                        <div class="col-md-10 input-icon-right">
+                            <input type="text" name="fname" class="form-control ">
+                            <!--<i class="fa fa-comment "></i>-->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">发送地址</label>
+                        <div class="col-md-10 input-icon-right">
+                            <input type="text" name="fname" class="form-control ">
+                            <div class="note">
+                                发送邮件的默认邮件地址.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">Email前缀</label>
+                        <div class="col-md-10 input-icon-right">
+                            <input type="text" name="fname" class="form-control " value="[DTMS]">
+                            <div class="note">
+                               这个前缀将会在所有邮件标题中显示.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">协议</label>
+                        <div class="col-md-10 input-icon-right">
+                            <select style="width:100%" class="select2">
+                                <option value="s">SMTP</option>
+                                <option value="ss">SECURE_SMTP</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">主机地址</label>
+                        <div class="col-md-10 input-icon-right">
+                            <input type="text" name="fname" class="form-control ">
+                            <div class="note">
+                                SMTP 主机的地址.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">SMTP 端口</label>
+                        <div class="col-md-10 input-icon-right">
+                            <input type="text" name="fname" class="form-control ">
+                            <div class="note">
+                                可选 - SMTP 的端口号. 为空则使用默认值 (默认: SMTP - 25, SMTPS - 465).
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">超时时间</label>
+                        <div class="col-md-10 input-icon-right">
+                            <input type="text" name="fname" class="form-control ">
+                            <div class="note">
+                                超时毫秒 - 0 或 负值表示不做超时限制. 为空则使用默认值 (10000 毫秒).
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">TLS</label>
+                        <div class="col-md-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input class="checkbox style-0" type="checkbox">
+                                    <span></span>
+                                </label>
+                            </div>
+                            <div class="note">
+                                可选 - 邮件服务器要求使用TLS安全加密.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-md-2">用户名</label>
+                        <div class="col-md-10 input-icon-right">
+                            <input type="text" name="fname" class="form-control ">
+                            <div class="note">
+                                可选 - 如果使用特别授权 SMTP 来发送email，则输入用户名.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-md-2">密码</label>
+                        <div class="col-md-10 input-icon-right">
+                            <input type="password" name="fname" class="form-control ">
+                            <div class="note">
+                                可选 - 同上, 如果使用特别授权 SMTP, 输入你的密码.
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                </form>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <hr>
+                <div class="text-center">
+                    <a id="btn_test_connection" href="javascript:void(0);"  class="btn btn-success"><i class="fa fa-envelope-o"></i> 测试链接</a>&nbsp;&nbsp;
+                    <a href="#pages/email.html"  class="btn btn-primary"><i class="fa fa-save"></i> 保存</a>&nbsp;&nbsp;
+                    <a href="#pages/email.html"  class="btn btn-default">取消</a>
+                </div>
+            </div>
+
+        </div>
+        <!--end row-->
+</div>
+<!-- end widget content -->
+</div>
+<!-- end widget div -->
+</div>
+<!-- end widget -->
+</article>
+
+</div>
+<!-- end row -->
+
+
+
+<script type="text/javascript">
+
+// DO NOT REMOVE : GLOBAL FUNCTIONS!
+pageSetUp();
+
+// open chat list
+$('#btn_test_connection').click(function (e) {
+    $('#div_test_connection').fadeToggle();
+    $('html,body').animate({scrollTop:0},500);
+
+    e.preventDefault();
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,1260 @@
+<style>
+div.dataTables_filter {
+    left: 0px;
+    position: absolute;
+    top: -52px;
+}
+div.dataTables_length {
+    position: absolute;
+    right: 0px;
+    top: -52px;
+}
+
+.table thead tr, .fc-border-separate thead tr {
+    background-color: #FFFFFF;
+    background-image: -moz-linear-gradient(center top , #FFFFFF 0px, #FFFFFF 100%);
+    font-size: 12px;
+}
+.toolbar > a {
+
+}
+
+.bs-example {
+    background-color: #FAFAFA;
+    border-color: #E5E5E5 #EEEEEE #EEEEEE;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0 0 15px;
+    padding: 15px;
+    position: relative;
+}
+.bs-example:after {
+    color: #BBBBBB;
+    content: "";
+    font-size: 12px;
+    font-weight: bold;
+    left: 15px;
+    letter-spacing: 1px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 15px;
+}
+.bs-example + .highlight {
+    border-radius: 0;
+    border-width: 0 0 1px;
+    margin: -15px 0 15px;
+}
+@media (min-width: 768px) {
+    .bs-example {
+        background-color: #FFFFFF;
+        border-color: #DDDDDD;
+        border-radius: 4px 4px 0 0;
+        border-width: 1px;
+        box-shadow: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .bs-example + .highlight {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-width: 1px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: -16px;
+    }
+}
+
+.module {
+    -moz-box-sizing: border-box;
+    margin-top: 0px;
+}
+.module:before, .module:after {
+    content: " ";
+    display: table;
+}
+.module:after {
+    clear: both;
+}
+.module:first-child {
+    margin-top: 0;
+}
+.module > .mod-header:before, .module > .mod-header:after {
+    content: " ";
+    display: table;
+}
+.module > .mod-header:after {
+    clear: both;
+}
+.module > .mod-header > h1, .module > .mod-header > h2, .module > .mod-header > h3, .module > .mod-header > h4, .module > .mod-header > h5, .module > .mod-header > h6 {
+    margin-top: 0;
+}
+.module > .mod-header + .mod-content {
+    margin-top: 10px;
+}
+.module > .mod-content:before, .module > .mod-content:after {
+    content: " ";
+    display: table;
+}
+.module > .mod-content:after {
+    clear: both;
+}
+.module > .mod-content iframe {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.module + .module {
+    border-top: 1px solid #CCCCCC;
+    margin-top: 25px;
+    padding-top: 25px;
+}
+.property-list {
+    display: block;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.property-list > li {
+    margin: 1px 0 0;
+    padding: 0;
+    position: relative;
+}
+.property-list img {
+    vertical-align: text-bottom;
+}
+.property-list .item {
+    margin: 1px 0 0;
+}
+.property-list .item .name {
+    -moz-box-sizing: border-box;
+    color: #707070;
+    display: inline-block;
+    font-weight: normal;
+    padding: 2px 5px 2px 0;
+    /*text-align: right;*/
+    width: 150px;
+    word-wrap: break-word;
+}
+.property-list .item .value {
+    display: inline-block;
+    max-width: 100%;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-top: 2px;
+    position: relative;
+    vertical-align: top;
+    word-wrap: break-word;
+}
+.property-list .item .value .value {
+    padding: 0;
+}
+.property-list .wrap {
+    padding: 0 10px 0 150px;
+}
+.property-list .wrap:before, .property-list .wrap:after {
+    content: " ";
+    display: table;
+}
+.property-list .wrap:after {
+    clear: both;
+}
+.property-list .wrap .name {
+    float: left;
+    margin-left: -150px;
+}
+.property-list.two-cols:before, .property-list.two-cols:after {
+    content: " ";
+    display: table;
+}
+.property-list.two-cols:after {
+    clear: both;
+}
+.property-list.two-cols > .item {
+    -moz-box-sizing: border-box;
+    clear: left;
+    float: left;
+    width: 50%;
+}
+.property-list.two-cols > .item-right {
+    clear: right;
+    float: right;
+}
+.property-list.two-cols > .item.full-width {
+    clear: both;
+    width: 100%;
+}
+.msie .property-list .wrap .value {
+    display: block;
+}
+.module > .mod-content .issues {
+    display: block;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.module > .mod-content .issues > li {
+    margin: 0;
+    padding: 0 0 0 26px;
+    position: relative;
+}
+.module > .mod-content .issues > li + li {
+    margin-top: 5px;
+}
+.module > .mod-content .issues > li .aui-icon, .module > .mod-content .issues > li img {
+    left: 0;
+    margin-top: 2px;
+    position: absolute;
+}
+.module > .mod-content .issues > li .issue:after {
+    content: ".";
+}
+.issue-list .issue-list-key {
+    width: 15%;
+}
+.issue-list .issue-list-date {
+    width: 35%;
+}
+.issue-container {
+    outline: medium none;
+}
+.issue-body-content {
+    padding: 0 20px 20px;
+}
+.issue-body-content .module > .mod-header {
+    /*background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAYAAABS3WWCAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NEQ5RDgxQzc2RjQ5MTFFMjhEMUNENzFGRUMwRjhBRTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NEQ5RDgxQzg2RjQ5MTFFMjhEMUNENzFGRUMwRjhBRTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0RDlEODFDNTZGNDkxMUUyOEQxQ0Q3MUZFQzBGOEFFNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0RDlEODFDNjZGNDkxMUUyOEQxQ0Q3MUZFQzBGOEFFNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PvXFWFAAAAAYSURBVHjaYvj//z8D0/Pnz/8zgFgAAQYAS5UJscReGMIAAAAASUVORK5CYII=") repeat-x scroll 0 10px rgba(0, 0, 0, 0);*/
+}
+
+.issue-body-content .module > .mod-header > h1, .issue-body-content .module > .mod-header > h2, .issue-body-content .module > .mod-header > h3, .issue-body-content .module > .mod-header > h4, .issue-body-content .module > .mod-header > h5, .issue-body-content .module > .mod-header > h6 {
+    background-color: #FFFFFF;
+    font-size: inherit;
+    font-weight: bold;
+    padding-right: 5px;
+}
+.issue-body-content .module > .mod-header .ops {
+    background-color: #FFFFFF;
+    margin-top: 2px;
+}
+.issue-body-content .module > .mod-content {
+    padding-left: 10px;
+}
+.issue-body-content .module + .module {
+    border-top: medium none;
+}
+.issue-body-content .property-list .item .name, .issue-body-content .item-details dl > dt {
+    text-align: left;
+}
+
+.timeline-seperator:after {
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    content: " ";
+    display: block;
+    margin: -8px 15px 10px 0;
+}
+.timeline-seperator {
+    color: #000000;
+    font-size: inherit
+display: block;
+    margin: 20px 20px 0 0;
+    text-align: left;
+    /*font-weight: bold;*/
+}
+.timeline-seperator > *:first-child {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 0px dashed rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    font-size: 13px;
+    padding: 4px 5px;
+}
+.table-noborder, .table-noborder >tbody > tr, .table-noborder >tbody > tr > td {
+    border-top: 0px solid #ddd;
+}
+span.details-label{
+    min-width:100px;
+    float: left;
+    min-height: 1px;
+    padding-left: 13px;
+    padding-right: 13px;
+    position: relative;
+    color: #999999;
+    margin: 0 0 9px;
+}
+</style>
+                <!-- row -->
+                <div class="row">
+                    <article class="col-sm-12 col-md-12 col-lg-12 sortable-grid ui-sortable">
+                        <!-- Widget ID (each widget will need unique ID)-->
+                        <div class="jarviswidget well" id="wid-id-3" data-widget-colorbutton="false" data-widget-editbutton="false" data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false" data-widget-custombutton="false" data-widget-sortable="false">
+                            <!-- widget options:
+                            usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+                            data-widget-colorbutton="false"
+                            data-widget-editbutton="false"
+                            data-widget-togglebutton="false"
+                            data-widget-deletebutton="false"
+                            data-widget-fullscreenbutton="false"
+                            data-widget-custombutton="false"
+                            data-widget-collapsed="true"
+                            data-widget-sortable="false"
+
+                            -->
+                            <header>
+                                <!--<span class="widget-icon"> <i class="fa fa-comments"></i> </span>-->
+                                <!--<h2>Default Tabs with border </h2>-->
+
+                            </header>
+
+                            <!-- widget div-->
+                            <div>
+                                <!-- widget edit box -->
+                                <div class="jarviswidget-editbox">
+                                    <!-- This area used as dropdown edit box -->
+
+                                </div>
+                                <!-- end widget edit box -->
+
+                                <!-- widget content -->
+                                <div class="widget-body">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <span class="font-md text-primary">IDTS</span><span class="font-md text-primary">/ IDTS-SP001</span>
+                                            <br>
+                                            <span class="font-lg">IDTS</span>
+                                        </div>
+                                    </div>
+
+                                    <hr class="simple">
+
+                                    <!-- row -->
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 toolbar">
+                                            <a class="btn btn-default">编辑</a>&nbsp;&nbsp;
+                                            <a class="btn btn-default">评论</a>&nbsp;&nbsp;
+                                            <div class="btn-group">
+                                                <a class="btn  btn-default">分配</a>
+                                                <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                    更多
+                                                    <i class="fa fa-caret-down"></i>
+                                                </a>
+                                                <ul class="dtable dropdown-menu pull-right">
+                                                    <li>
+                                                        <a href="javascript:void(0);">添加附件</a>
+                                                    </li>
+                                                    <li class="divider"></li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">关注</a>
+                                                    </li>
+                                                    <li class="divider"></li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">移动</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">标签</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">复制</a>
+                                                    </li>
+                                                    <li class="divider"></li>
+                                                    <li>
+                                                        <a href="javascript:void(0);">删除</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="btn-group ">
+                                                <a class="btn  btn-default">开始处理</a>
+                                                <a class="btn  btn-default">开始评审</a>
+                                                <a class="btn  btn-default">完成</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end row-->
+
+                                    <!--row -->
+                                    <div class="row">
+
+                                        <!--left zone-->
+                                        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 ">
+                                            <!--<div class="bs-example" style="margin-top: 20px;">-->
+
+                                            <!--row-->
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                                                    <span class="timeline-seperator">
+                                                        <span>基本信息</span>
+
+                                                        <div class="btn-group pull-right">
+                                                            <a class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
+                                                                <span class="caret single"></span>
+                                                            </a>
+                                                        </div>
+                                                    </span>
+
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                            <ul class="list-unstyled">
+                                                                <li >
+                                                                    <p class="text-muted">
+                                                                        <span class="details-label"> 类型:</span>
+                                                                        <a href="#" id="type" data-type="select2" data-pk="1" data-select-search="true" data-value="TK" data-original-title="选择类型">任务</a>
+                                                                    </p>
+                                                                </li>
+                                                                <li >
+                                                                    <p class="text-muted">
+                                                                        <span class="details-label"> 优先级:</span>
+                                                                        <a href="#" id="priority" data-type="select2" data-pk="1" data-select-search="true" data-value="MAJOR" data-original-title="选择优先级">严重</a>
+                                                                    </p>
+                                                                </li>
+                                                                <li >
+                                                                    <p class="text-muted">
+                                                                        <span class="details-label"> 影响版本:</span>
+                                                                        <a href="#" id="affectsVersion" data-type="select2" data-pk="1" data-select-search="true" data-value="MAJOR" data-original-title="选择优先级">None</a>
+                                                                    </p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                                            <ul class="list-unstyled">
+                                                                <li >
+                                                                    <p class="text-muted">
+                                                                        <span class="details-label"> 状态:</span>
+                                                                        <a href="#" id="status" data-type="select2" data-pk="1" data-select-search="true" data-value="NEW" data-original-title="选择状态">
+                                                                            新缺陷
+                                                                        </a>
+                                                                    </p>
+                                                                </li>
+                                                                <li >
+                                                                    <p class="text-muted">
+                                                                    </p>
+                                                                </li>
+                                                                <li >
+                                                                    <p class="text-muted">
+                                                                        <span class="details-label">修复版本：</span>
+                                                                        <a href="#" id="fixVersion" data-type="select2" data-pk="1" data-select-search="true" data-value="MAJOR" data-original-title="选择优先级">
+                                                                            V1.0
+                                                                        </a>
+                                                                    </p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--end row-->
+                                            <!--row-->
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                                                    <ul class="list-unstyled">
+                                                        <li>
+                                                            <p class="text-muted">
+                                                                <span class="details-label">标签：</span>
+                                                                <a href="#" id="labels" data-type="select2" data-pk="1" data-select-search="true" data-value="MAJOR" data-original-title="选择优先级">
+                                                                    前台, 后台, 检测模块
+                                                                </a>
+                                                                </span>
+                                                            </p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="text-muted">
+                                                                <span class="details-label">环境：</span>
+                                                                <a href="#" id="environment" data-type="select2" data-pk="1" data-select-search="true" data-value="MAJOR" data-original-title="选择优先级">
+                                                                    Windows 2000, CentOS 5.4(Linux)
+                                                                </a>
+                                                            </p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!--end row-->
+
+                                            <!--row-->
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                                                    <span class="timeline-seperator">
+                                                        <span>描述信息</span>
+
+                                                        <div class="btn-group pull-right">
+                                                            <a class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
+                                                                <span class="caret single"></span>
+                                                            </a>
+                                                        </div>
+                                                    </span>
+
+                                                    <div class="chat-body no-padding profile-message">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <ul class="list-unstyled">
+                                                                <li >
+                                                                    <p class="text-muted">
+                                                                        <a href="#" id="description" data-type="select2" data-pk="1" data-select-search="true" data-value="TK" data-original-title="选择类型">
+                                                                            无法保证该缺陷在生产环境中保持稳定，只有重新界定需求的边界，才可以更准确的把握缺陷的关键。我认为我们可以举行会议进行讨论。
+                                                                        </a>
+                                                                    </p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--end row-->
+
+                                            <!--row-->
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                                                    <span class="timeline-seperator">
+                                                        <span>附件</span>
+
+                                                        <div class="btn-group pull-right">
+                                                            <a class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
+                                                                <span class="caret single"></span>
+                                                            </a>
+                                                        </div>
+                                                    </span>
+
+                                                    <div class="chat-body no-padding profile-message">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <table class="table table-hover table-noborder">
+                                                                <tbody>
+                                                                <tr>
+                                                                    <td><a href="#">test.doc</a></td>
+                                                                    <td width="100">20 KB</td>
+                                                                    <td width="160">2014年 1月2日</td>
+                                                                    <td width="20"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><a href="#">Design Plan.doc</a></td>
+                                                                    <td width="100">10 MB</td>
+                                                                    <td width="160">5分钟前</td>
+                                                                    <td width="20"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                                                </tr>
+                                                                </tbody>
+                                                            </table>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--end row-->
+
+                                            <hr>
+                                            <!--row-->
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                                                    <div class="padding-10">
+
+                                                        <ul class="nav nav-tabs tabs-pull-right">
+                                                            <li>
+                                                                <a href="#a1" data-toggle="tab">历史</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#a2" data-toggle="tab">新成员</a>
+                                                            </li>
+                                                            <li  class="active">
+                                                                <a href="#a3" data-toggle="tab">评论</a>
+                                                            </li>
+                                                            <li class="pull-left">
+                                                                <span class="margin-top-10 display-inline"><i class="fa fa-rss text-success"></i> 活动信息</span>
+                                                            </li>
+                                                        </ul>
+
+                                                        <div class="tab-content padding-top-10">
+                                                            <div class="tab-pane fade" id="a1">
+                                                                <div class="row">
+                                                                    <div class="col-xs-2 col-sm-1">
+                                                                        <time datetime="2014-09-20" class="icon">
+                                                                            <strong>一月</strong>
+                                                                            <span>10</span>
+                                                                        </time>
+                                                                    </div>
+
+                                                                    <div class="col-xs-10 col-sm-11">
+                                                                        <h6 class="no-margin"><a href="javascript:void(0);">创建缺陷</a></h6>
+                                                                        <p>
+                                                                           Peter Li 在 2014-01-10 创建了缺陷。
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="col-sm-12">
+                                                                        <hr>
+                                                                    </div>
+                                                                    <div class="col-xs-2 col-sm-1">
+                                                                        <time datetime="2014-09-20" class="icon">
+                                                                            <strong class=" bg-color-greenLight">一月</strong>
+                                                                            <span>10</span>
+                                                                        </time>
+                                                                    </div>
+
+                                                                    <div class="col-xs-10 col-sm-11">
+                                                                        <h6 class="no-margin"><a href="javascript:void(0);">修改缺陷状态</a></h6>
+                                                                        <p>
+                                                                            Peter Li 在 2014-01-10 将状态 <span class="txt-color-green">新缺陷</span> 修改为 <span class="txt-color-green">开启</span>。
+                                                                        </p>
+                                                                    </div>
+
+                                                                    <div class="col-sm-12">
+                                                                        <hr>
+                                                                    </div>
+
+                                                                    <div class="col-xs-2 col-sm-1">
+                                                                        <time datetime="2014-09-20" class="icon">
+                                                                            <strong>一月</strong>
+                                                                            <span>10</span>
+                                                                        </time>
+                                                                    </div>
+                                                                    <div class="col-xs-10 col-sm-11">
+                                                                        <h6 class="no-margin"><a href="javascript:void(0);">添加评论</a></h6>
+                                                                        <p>
+                                                                            Peter Li 在 2014-01-10 添加新留言。<br>
+                                                                            <blockquote>
+                                                                                <p>缺陷的根源在于单元测试进行的不彻底，需要改进单元测试方法。</p>
+                                                                                <small>2014-01-10 <cite title="14:05">14:05</cite></small>
+                                                                            </blockquote>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="col-sm-12">
+                                                                        <br>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <!--end tab-->
+
+                                                            <div class="tab-pane fade" id="a2">
+
+                                                                <div class="alert alert-info fade in">
+                                                                    <button class="close" data-dismiss="alert">
+                                                                        ×
+                                                                    </button>
+                                                                    <i class="fa-fw fa fa-info"></i>
+                                                                    今天有 <strong>51位新成员 </strong>加入!
+                                                                </div>
+
+                                                                <div class="user" title="email@company.com">
+                                                                    <img src="img/avatars/female.png"><a href="javascript:void(0);">Jenn Wilson</a>
+                                                                    <div class="email">
+                                                                        travis@company.com
+                                                                    </div>
+                                                                </div>
+                                                                <div class="user" title="email@company.com">
+                                                                    <img src="img/avatars/male.png"><a href="javascript:void(0);">Marshall Hitt</a>
+                                                                    <div class="email">
+                                                                        marshall@company.com
+                                                                    </div>
+                                                                </div>
+                                                                <div class="user" title="email@company.com">
+                                                                    <img src="img/avatars/male.png"><a href="javascript:void(0);">Joe Cadena</a>
+                                                                    <div class="email">
+                                                                        joe@company.com
+                                                                    </div>
+                                                                </div>
+                                                                <div class="user" title="email@company.com">
+                                                                    <img src="img/avatars/male.png"><a href="javascript:void(0);">Mike McBride</a>
+                                                                    <div class="email">
+                                                                        mike@company.com
+                                                                    </div>
+                                                                </div>
+                                                                <div class="user" title="email@company.com">
+                                                                    <img src="img/avatars/male.png"><a href="javascript:void(0);">Travis Wilson</a>
+                                                                    <div class="email">
+                                                                        travis@company.com
+                                                                    </div>
+                                                                </div>
+                                                                <div class="user" title="email@company.com">
+                                                                    <img src="img/avatars/male.png"><a href="javascript:void(0);">Marshall Hitt</a>
+                                                                    <div class="email">
+                                                                        marshall@company.com
+                                                                    </div>
+                                                                </div>
+                                                                <div class="user" title="Joe Cadena joe@company.com">
+                                                                    <img src="img/avatars/male.png"><a href="javascript:void(0);">Joe Cadena</a>
+                                                                    <div class="email">
+                                                                        joe@company.com
+                                                                    </div>
+                                                                </div>
+                                                                <div class="user" title="email@company.com">
+                                                                    <img src="img/avatars/male.png"><a href="javascript:void(0);">Mike McBride</a>
+                                                                    <div class="email">
+                                                                        mike@company.com
+                                                                    </div>
+                                                                </div>
+                                                                <div class="user" title="email@company.com">
+                                                                    <img src="img/avatars/male.png"><a href="javascript:void(0);">Marshall Hitt</a>
+                                                                    <div class="email">
+                                                                        marshall@company.com
+                                                                    </div>
+                                                                </div>
+                                                                <div class="user" title="email@company.com">
+                                                                    <img src="img/avatars/male.png"><a href="javascript:void(0);">Joe Cadena</a>
+                                                                    <div class="email">
+                                                                        joe@company.com
+                                                                    </div>
+                                                                </div>
+                                                                <div class="user" title="email@company.com">
+                                                                    <img src="img/avatars/male.png"><a href="javascript:void(0);"> Mike McBride</a>
+                                                                    <div class="email">
+                                                                        mike@company.com
+                                                                    </div>
+                                                                </div>
+
+                                                            </div><!-- end tab -->
+
+                                                            <div class="tab-pane fade in active" id="a3">
+
+                                                                <div class="chat-body no-padding profile-message">
+                                                                    <ul>
+                                                                        <li class="message">
+                                                                            <img src="img/avatars/sunny.png" class="online">
+                                                                            <span class="message-text">
+                                                                                <a href="javascript:void(0);" class="username">Peter Li
+                                                                                    <small class="text-muted pull-right ultra-light"> 2 分钟前 </small>
+                                                                                </a>
+                                                                                无法保证该缺陷在生产环境中保持稳定，只有重新界定需求的边界，才可以更准确的把握缺陷的关键。我认为我们可以举行会议进行讨论。 </span>
+                                                                            <ul class="list-inline font-xs" style="margin-top: 5px;">
+                                                                                <li>
+                                                                                    <a href="javascript:void(0);" class="text-info"><i class="fa fa-reply"></i> 回复</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="javascript:void(0);" class="text-muted">显示所有回复 (14)</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="javascript:void(0);" class="text-primary">编辑</a>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <a href="javascript:void(0);" class="text-danger">删除</a>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="message message-reply">
+                                                                            <img src="img/avatars/3.png" class="online">
+                                                                            <span class="message-text"> <a href="javascript:void(0);" class="username">Serman Syla</a> Haha! Yeah I know what you mean. Thanks for the file Sadi! <i class="fa fa-smile-o txt-color-orange"></i> </span>
+
+                                                                            <ul class="list-inline font-xs">
+                                                                                <li>
+                                                                                    <a href="javascript:void(0);" class="text-muted">一分钟前 </a>
+                                                                                </li>
+                                                                                <!--<li>-->
+                                                                                    <!--<a href="javascript:void(0);" class="text-danger"><i class="fa fa-thumbs-up"></i> Like</a>-->
+                                                                                <!--</li>-->
+                                                                            </ul>
+
+                                                                        </li>
+                                                                        <li class="message message-reply">
+                                                                            <img src="img/avatars/4.png" class="online">
+                                                                            <span class="message-text"> <a href="javascript:void(0);" class="username">Sadi Orlaf </a> Haha! Yeah I know what you mean. Thanks for the file Sadi! <i class="fa fa-smile-o txt-color-orange"></i> </span>
+
+                                                                            <ul class="list-inline font-xs">
+                                                                                <li>
+                                                                                    <a href="javascript:void(0);" class="text-muted">刚刚 </a>
+                                                                                </li>
+                                                                                <!--<li>-->
+                                                                                    <!--<a href="javascript:void(0);" class="text-danger"><i class="fa fa-thumbs-up"></i> Like</a>-->
+                                                                                <!--</li>-->
+                                                                            </ul>
+                                                                            <!--<input class="form-control input-xs" placeholder="Type and enter" type="text">-->
+                                                                        </li>
+                                                                        <li>
+                                                                            <div class="input-group wall-comment-reply">
+                                                                                <input id="btn-input" type="text" class="form-control" placeholder="在这里输入您的回复内容...">
+                                                                                <span class="input-group-btn">
+                                                                                    <button class="btn btn-primary" id="btn-chat">
+                                                                                        <i class="fa fa-reply"></i> 回复
+                                                                                    </button> </span>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+
+                                                                </div>
+
+                                                                <button id="btnAddComment" class="btn btn-default"><i class="fa fa-comment-o"></i> 添加评论</button>
+                                                                <hr>
+                                                                <form id="commentForm" method="post" class="padding-bottom-10 hide" onsubmit="return false;">
+                                                                    <p class="text-muted">评论</p>
+                                                                    <textarea rows="4" class="form-control" placeholder="您想说些什么?"></textarea>
+                                                                    <div class="margin-top-10">
+                                                                        <button id="btnCancelComment" type="button" class="btn btn-sm btn-default pull-right" style="margin-left: 5px;">
+                                                                            取消
+                                                                        </button>
+                                                                        <button  type="submit" class="btn btn-sm btn-primary pull-right">
+                                                                            提交
+                                                                        </button>
+                                                                        <!--<a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="Add Location"><i class="fa fa-location-arrow"></i></a>-->
+                                                                        <!--<a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="Add Voice"><i class="fa fa-microphone"></i></a>-->
+                                                                        <!--<a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="Add Photo"><i class="fa fa-camera"></i></a>-->
+                                                                        <!--<a href="javascript:void(0);" class="btn btn-link profile-link-btn" rel="tooltip" data-placement="bottom" title="Add File"><i class="fa fa-file"></i></a>-->
+                                                                    </div>
+                                                                </form>
+
+                                                            </div><!-- end tab -->
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--end row-->
+                                        </div>
+                                        <!--left zone-->
+
+                                        <!--right zone-->
+                                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 ">
+                                            <!--row-->
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                                                    <span class="timeline-seperator">
+                                                        <span>人员</span>
+
+                                                        <div class="btn-group pull-right">
+                                                            <a class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
+                                                                <span class="caret single"></span>
+                                                            </a>
+                                                        </div>
+                                                    </span>
+
+
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <ul class="list-unstyled">
+                                                                <li >
+                                                                    <p class="text-muted">
+                                                                        <span class="details-label"> 分配给:</span>
+                                                                        <a href="javascript:void(0);" id="assigner" data-type="select2" data-pk="1" data-select-search="true" data-value="TK" data-original-title="分配给">
+                                                                            Peter Li
+                                                                        </a>
+                                                                    </p>
+                                                                </li>
+                                                                <li >
+                                                                    <p class="text-muted">
+                                                                        <span class="details-label"> 提交人:</span>
+                                                                        <a href="#pages/profile.html">
+                                                                            Wade
+                                                                        </a>
+                                                                    </p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--end row-->
+
+                                            <!--row-->
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                                                    <span class="timeline-seperator">
+                                                        <span>日期</span>
+
+                                                        <div class="btn-group pull-right">
+                                                            <a class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
+                                                                <span class="caret single"></span>
+                                                            </a>
+                                                        </div>
+                                                    </span>
+
+
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <ul class="list-unstyled">
+                                                                <li >
+                                                                    <p class="text-muted">
+                                                                        <span class="details-label"> 截止日期:</span>
+                                                                        <a href="#" id="type1" data-type="select2" data-pk="1" data-select-search="true" data-value="TK" data-original-title="选择类型">
+                                                                            2014年 5月10日 10:00
+                                                                        </a>
+                                                                    </p>
+                                                                </li>
+                                                                <li >
+                                                                    <p class="text-muted">
+                                                                        <span class="details-label"> 创建日期:</span>
+                                                                        <a href="#" id="priority1" data-type="select2" data-pk="1" data-select-search="true" data-value="MAJOR" data-original-title="选择优先级">
+                                                                            2014年 1月10日 14:00
+                                                                        </a>
+                                                                        <!--<a href="mailto:simmons@smartadmin">ceo@smartadmin.com</a>-->
+                                                                    </p>
+                                                                </li>
+                                                                <li >
+                                                                    <p class="text-muted">
+                                                                        <span class="details-label"> 修改日期:</span>
+                                                                        <a href="#" id="priority1" data-type="select2" data-pk="1" data-select-search="true" data-value="MAJOR" data-original-title="选择优先级">
+                                                                            今天 10:00
+                                                                        </a>
+                                                                        <!--<a href="mailto:simmons@smartadmin">ceo@smartadmin.com</a>-->
+                                                                    </p>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--end row-->
+                                            <!--row-->
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                                                    <span class="timeline-seperator">
+                                                        <span>日期</span>
+
+                                                        <div class="btn-group pull-right">
+                                                            <a class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" href="javascript:void(0);">
+                                                                <span class="caret single"></span>
+                                                            </a>
+                                                        </div>
+                                                    </span>
+
+
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                            <ul class="list-unstyled">
+                                                                <li >
+                                                                    <p class="text-muted">
+                                                                        <span class="details-label"> 估算时间:</span>
+                                                                    </p>
+                                                                    <div class="col-md-9">
+                                                                        <div class="progress ">
+                                                                            <div class="progress-bar bg-color-greenLight" style="width: 100%" role="progressbar">
+                                                                                <span class="">1w 2d 3h</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                        <!--<span class="col-md-2">1w 2d</span>-->
+                                                                </li>
+                                                                <li >
+                                                                    <p class="text-muted">
+                                                                        <span class="details-label"> 仍需要时间:</span>
+                                                                    </p>
+                                                                    <div class="col-md-9">
+                                                                        <div class="progress ">
+                                                                            <div class="progress-bar bg-color-orange" style="width: 40%" role="progressbar">
+                                                                                <span class="">1w 2d 3h</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!--<span class="col-md-2">1w 2d</span>-->
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--end row-->
+
+                                        </div>
+                                        <!--end right zone-->
+                                    </div>
+                                    <!--end row -->
+
+
+                                </div>
+                                <!-- end widget content -->
+                            </div>
+                            <!-- end widget div -->
+                        </div>
+                        <!-- end widget -->
+                    </article>
+
+                </div>
+                <!-- end row -->
+
+
+
+		<script type="text/javascript">
+
+            /* chart colors default */
+            var $chrt_border_color = "#efefef";
+            var $chrt_grid_color = "#DDD"
+            var $chrt_main = "#E24913";
+            /* red       */
+            var $chrt_second = "#6595b4";
+            /* blue      */
+            var $chrt_third = "#FF9F01";
+            /* orange    */
+            var $chrt_fourth = "#7e9d3a";
+            /* green     */
+            var $chrt_fifth = "#BD362F";
+            /* dark red  */
+            var $chrt_mono = "#000";
+		    // DO NOT REMOVE : GLOBAL FUNCTIONS!
+            pageSetUp();
+
+            progressbar();
+            function progressbar() {
+                loadScript("js/plugin/bootstrap-progressbar/bootstrap-progressbar.js", editable);
+            }
+            function editable() {
+                loadScript("js/plugin/x-editable/x-editable.min.js", loadFlotScripts);
+            }
+
+            function loadFlotScripts() {
+                loadScript("js/plugin/flot/jquery.flot.cust.js", ft_2);
+
+                function ft_2() {
+                    loadScript("js/plugin/flot/jquery.flot.resize.js", ft_3);
+                }
+
+                function ft_3() {
+                    loadScript("js/plugin/flot/jquery.flot.fillbetween.min.js", ft_4);
+                }
+
+                function ft_4() {
+                    loadScript("js/plugin/flot/jquery.flot.orderBar.js", ft_5);
+                }
+
+                function ft_5() {
+                    loadScript("js/plugin/flot/jquery.flot.pie.js", ft_6);
+                }
+
+                function ft_6() {
+                    loadScript("js/plugin/flot/jquery.flot.tooltip.js", startUser);
+                }
+            }
+
+
+
+            function startUser(){
+                $('#btnAddComment, #btnCancelComment').click(function(e){
+                    $('#commentForm').toggleClass('hide');
+                    $('#btnAddComment').toggleClass('hide');
+                    e.preventDefault();
+                });
+
+                $('.progress-bar').progressbar({
+                    display_text : 'fill'
+                });
+
+                /* site stats chart */
+
+
+
+                if ($("#issue-stats").length) {
+                    var d1 = [[1196726400000, 1080], [1196812800000, 4070], [1196899200000, 2050], [1196985600000, 1077], [1197072000000, 4136], [1197158400000, 3375], [1197244800000, 2736], [1197068400000, 1086], [1197154800000, 676], [1197241200000, 1205], [1197327600000, 906], [1197414000000, 710], [1197500400000, 639], [1197586800000, 540], [1197673200000, 435], [1197759600000, 301], [1197846000000, 575], [1197932400000, 481], [1198018800000, 591], [1198105200000, 608], [1198191600000, 459], [1198278000000, 234], [1198364400000, 1352], [1198450800000, 686], [1198537200000, 279], [1198623600000, 449], [1198710000000, 468], [1198796400000, 392], [1198882800000, 282], [1198969200000, 208], [1199055600000, 229], [1199142000000, 177], [1199228400000, 374], [1199314800000, 436], [1199401200000, 404], [1199487600000, 253], [1199574000000, 218], [1199660400000, 476], [1199746800000, 462], [1199833200000, 500], [1199919600000, 700], [1200006000000, 750], [1200092400000, 600], [1200178800000, 500], [1200265200000, 900], [1200351600000, 930], [1200438000000, 1200], [1200524400000, 980], [1200610800000, 950], [1200697200000, 900], [1200783600000, 1000], [1200870000000, 1050], [1200956400000, 1150], [1201042800000, 1100], [1201129200000, 1200], [1201215600000, 1300], [1201302000000, 1700], [1201388400000, 1450], [1201474800000, 1500], [1201561200000, 546], [1201647600000, 614], [1201734000000, 954], [1201820400000, 1700], [1201906800000, 1800], [1201993200000, 1900], [1202079600000, 2000], [1202166000000, 2100], [1202252400000, 2200], [1202338800000, 2300], [1202425200000, 2400], [1202511600000, 2550], [1202598000000, 2600], [1202684400000, 2500], [1202770800000, 2700], [1202857200000, 2750], [1202943600000, 2800], [1203030000000, 3245], [1203116400000, 3345], [1203202800000, 3000], [1203289200000, 3200], [1203375600000, 3300], [1203462000000, 3400], [1203548400000, 3600], [1203634800000, 3700], [1203721200000, 3800], [1203807600000, 4000], [1203894000000, 4500]];
+
+                    for (var i = 0; i < d1.length; ++i) {
+                        d1[i][0] += 60 * 60 * 1000;
+                    }
+                    var d2 = [[1196463600000, 0], [1196550000000, 0], [1196636400000, 0], [1196722800000, 77], [1196809200000, 3636], [1196895600000, 3575], [1196982000000, 2736], [1197068400000, 1086], [1197154800000, 676], [1197241200000, 1205], [1197327600000, 906], [1197414000000, 710], [1197500400000, 639], [1197586800000, 540], [1197673200000, 435], [1197759600000, 301], [1197846000000, 575], [1197932400000, 481], [1198018800000, 591], [1198105200000, 608], [1198191600000, 459], [1198278000000, 234], [1198364400000, 1352], [1198450800000, 686], [1198537200000, 279], [1198623600000, 449], [1198710000000, 468], [1198796400000, 392], [1198882800000, 282], [1198969200000, 208], [1199055600000, 229], [1199142000000, 177], [1199228400000, 374], [1199314800000, 436], [1199401200000, 404], [1199487600000, 253], [1199574000000, 218], [1199660400000, 476], [1199746800000, 462], [1199833200000, 500], [1199919600000, 700], [1200006000000, 750], [1200092400000, 600], [1200178800000, 500], [1200265200000, 900], [1200351600000, 930], [1200438000000, 1200], [1200524400000, 980], [1200610800000, 950], [1200697200000, 900], [1200783600000, 1000], [1200870000000, 1050], [1200956400000, 1150], [1201042800000, 1100], [1201129200000, 1200], [1201215600000, 1300], [1201302000000, 1700], [1201388400000, 1450], [1201474800000, 1500], [1201561200000, 546], [1201647600000, 614], [1201734000000, 954], [1201820400000, 1700], [1201906800000, 1800], [1201993200000, 1900], [1202079600000, 2000], [1202166000000, 2100], [1202252400000, 2200], [1202338800000, 2300], [1202425200000, 2400], [1202511600000, 2550], [1202598000000, 2600], [1202684400000, 2500], [1202770800000, 2700], [1202857200000, 2750], [1202943600000, 2800], [1203030000000, 3245], [1203116400000, 3345], [1203202800000, 3000], [1203289200000, 3200], [1203375600000, 3300], [1203462000000, 3400], [1203548400000, 3600], [1203634800000, 3700], [1203721200000, 3800], [1203807600000, 4000], [1203894000000, 4500]];
+
+                    for (var i = 0; i < d2.length; ++i) {
+                        d2[i][0] += 60 * 60 * 1000;
+                    }
+
+                    function weekendAreas(axes) {
+                        var markings = [];
+                        var d = new Date(axes.xaxis.min);
+                        // go to the first Saturday
+                        d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 1) % 7))
+                        d.setUTCSeconds(0);
+                        d.setUTCMinutes(0);
+                        d.setUTCHours(0);
+                        var i = d.getTime();
+                        do {
+                            // when we don't set yaxis, the rectangle automatically
+                            // extends to infinity upwards and downwards
+                            markings.push({
+                                xaxis : {
+                                    from : i,
+                                    to : i + 2 * 24 * 60 * 60 * 1000
+                                }
+                            });
+                            i += 7 * 24 * 60 * 60 * 1000;
+                        } while (i < axes.xaxis.max);
+
+                        return markings;
+                    }
+
+                    var createdIssues = [[1, 75], [3, 87], [4, 93], [5, 127], [6, 116], [7, 137], [8, 135], [9, 130], [10, 167], [11, 169], [12, 179], [13, 185], [14, 176], [15, 180], [16, 174], [17, 193], [18, 186], [19, 177], [20, 153], [21, 149], [22, 130], [23, 100], [24, 50]];
+                    var fixedIssues = [[1, 65], [3, 50], [4, 73], [5, 100], [6, 95], [7, 103], [8, 111], [9, 97], [10, 125], [11, 100], [12, 95], [13, 141], [14, 126], [15, 131], [16, 146], [17, 158], [18, 160], [19, 151], [20, 125], [21, 110], [22, 100], [23, 85], [24, 37]];
+                    //console.log(pageviews)
+                    var plot = $.plot($("#issue-stats"), [{
+                        data : d1,
+                        label : "已创建缺陷"
+                    }, {
+                        data : d2,
+                        label : "被修复缺陷"
+                    }], {
+                        series : {
+                            lines : {
+                                show : true,
+                                lineWidth : 1,
+                                fill : true,
+                                fillColor : {
+                                    colors : [{
+                                        opacity : 0.1
+                                    }, {
+                                        opacity : 0.15
+                                    }]
+                                }
+                            },
+                            points : {
+                                show : true
+                            },
+                            shadowSize : 0
+                        },
+                        xaxis : {
+                            mode : "time",
+                            dateFormat : "%y-%0m-%0d",
+                            defaultTheme : false
+//                            monthNames: ["jan", "feb", "mar", "apr", "maj", "jun", "jul", "aug", "sep", "okt", "nov", "dec"]
+//                            tickLength : 1
+                        },
+
+                        yaxes : [{
+                            min : 20,
+                            tickLength : 5
+                        }],
+                        grid : {
+                            hoverable : true,
+                            clickable : true,
+                            tickColor : $chrt_border_color,
+                            borderWidth : 0,
+                            borderColor : $chrt_border_color
+                        },
+                        tooltip : true,
+                        tooltipOpts : {
+                            content : "%s for <b>%x:00 hrs</b> was %y",
+                            dateFormat : "%y-%0m-%0d",
+                            defaultTheme : false
+                        },
+                        colors : [$chrt_main, $chrt_second]
+//                        xaxis : {
+//                            ticks : 15,
+//                            tickDecimals : 2
+//                        },
+//                        yaxis : {
+//                            ticks : 15,
+//                            tickDecimals : 0
+//                        }
+                    });
+
+                }
+
+                /* end site stats */
+
+
+                /*
+                 * X-Ediable
+                 */
+                (function (e) {
+                    "use strict";
+                    var t = function (e) {
+                        this.init("address", e, t.defaults)
+                    };
+                    e.fn.editableutils.inherit(t, e.fn.editabletypes.abstractinput);
+                    e.extend(t.prototype, {
+                        render: function () {
+                            this.$input = this.$tpl.find("input")
+                        },
+                        value2html: function (t, n) {
+                            if (!t) {
+                                e(n).empty();
+                                return
+                            }
+                            var r = e("<div>").text(t.city).html() + ", " + e("<div>").text(t.street).html() +
+                                    " st., bld. " + e("<div>").text(t.building).html();
+                            e(n).html(r)
+                        },
+                        html2value: function (e) {
+                            return null
+                        },
+                        value2str: function (e) {
+                            var t = "";
+                            if (e)
+                                for (var n in e)
+                                    t = t + n + ":" + e[n] + ";";
+                            return t
+                        },
+                        str2value: function (e) {
+                            return e
+                        },
+                        value2input: function (e) {
+                            if (!e)
+                                return;
+                            this.$input.filter('[name="city"]').val(e.city);
+                            this.$input.filter('[name="street"]').val(e.street);
+                            this.$input.filter('[name="building"]').val(e.building)
+                        },
+                        input2value: function () {
+                            return {
+                                city: this.$input.filter('[name="city"]').val(),
+                                street: this.$input.filter('[name="street"]').val(),
+                                building: this.$input.filter('[name="building"]').val()
+                            }
+                        },
+                        activate: function () {
+                            this.$input.filter('[name="city"]').focus()
+                        },
+                        autosubmit: function () {
+                            this.$input.keydown(function (t) {
+                                t.which === 13 && e(this).closest("form").submit()
+                            })
+                        }
+                    });
+                    t.defaults = e.extend({}, e.fn.editabletypes.abstractinput.defaults, {
+                        tpl: '<div class="editable-address"><label><span>City: </span><input type="text" name="city" class="input-small"></label></div><div class="editable-address"><label><span>Street: </span><input type="text" name="street" class="input-small"></label></div><div class="editable-address"><label><span>Building: </span><input type="text" name="building" class="input-mini"></label></div>',
+                        inputclass: ""
+                    });
+                    e.fn.editabletypes.address = t
+                })(window.jQuery);
+
+
+                //defaults
+                $.fn.editable.defaults.url = '/post';
+//                $.fn.editable.defaults.mode = 'inline';
+
+                var types = [];
+                $.each({
+                    "BU": "缺陷",
+                    "TK": "任务"
+                }, function (k, v) {
+                    types.push({
+                        id: k,
+                        text: v
+                    });
+                });
+
+                $('#type').editable({
+                    source: types,
+                    select2: {
+                        width: 200
+                    }
+                });
+
+                var status = [];
+                $.each({
+                    "NEW": "新缺陷",
+                    "OPEN": "打开"
+                }, function (k, v) {
+                    status.push({
+                        id: k,
+                        text: v
+                    });
+                });
+                $('#status').editable({
+                    source: status,
+                    select2: {
+                        width: 200
+                    }
+                });
+
+                $('#fixVersion').editable({
+                    datepicker: {
+                        todayBtn: 'linked'
+                    }
+                });
+            }
+		</script>
+
+		<!-- Your GOOGLE ANALYTICS CODE Below -->
+		<script type="text/javascript">
+//			var _gaq = _gaq || [];
+//				_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
+//				_gaq.push(['_trackPageview']);
+//
+//			(function() {
+//				var ga = document.createElement('script');
+//				ga.type = 'text/javascript';
+//				ga.async = true;
+//				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+//				var s = document.getElementsByTagName('script')[0];
+//				s.parentNode.insertBefore(ga, s);
+//			})();
+
+		</script>
+
+	</body>
+
+</html>

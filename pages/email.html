@@ -1,0 +1,196 @@
+<style>
+    td > ul {
+        margin-left: 0;
+        padding-left: 16px;
+    }
+</style>
+
+<!-- row -->
+<div class="row">
+    <article class="col-sm-12 col-md-12 col-lg-12 sortable-grid ui-sortable">
+        <!-- Widget ID (each widget will need unique ID)-->
+        <div class="jarviswidget well" id="wid-id-3" data-widget-colorbutton="false" data-widget-editbutton="false"
+             data-widget-togglebutton="false" data-widget-deletebutton="false" data-widget-fullscreenbutton="false"
+             data-widget-custombutton="false" data-widget-sortable="false">
+        <!-- widget options:
+        usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+
+        data-widget-colorbutton="false"
+        data-widget-editbutton="false"
+        data-widget-togglebutton="false"
+        data-widget-deletebutton="false"
+        data-widget-fullscreenbutton="false"
+        data-widget-custombutton="false"
+        data-widget-collapsed="true"
+        data-widget-sortable="false"
+
+        -->
+        <header>
+            <!--<span class="widget-icon"> <i class="fa fa-comments"></i> </span>-->
+            <!--<h2>Default Tabs with border </h2>-->
+
+        </header>
+
+        <!-- widget div-->
+        <div>
+        <!-- widget edit box -->
+        <div class="jarviswidget-editbox">
+            <!-- This area used as dropdown edit box -->
+
+        </div>
+        <!-- end widget edit box -->
+
+        <!-- widget content -->
+        <div class="widget-body">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                <h4>Email 服务设置</h4>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 text-align-right">
+
+                <div class="btn-group">
+                    <a id="btn_addrole" class="btn btn-sm btn-success" href="#pages/email_new.html">
+                        <i class="fa fa-plus"></i>
+                        新建配置
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr class="simple">
+
+            <!--<div class="widget-body-toolbar">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-sm-4">-->
+                        <!--<i class="fa fa-lock fa-2x"></i> <span class="font-lg">系统资源设定</span>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-8 text-align-right">-->
+
+                        <!--<div class="btn-group">-->
+                            <!--<a id="btn_addrole" class="btn btn-sm btn-success" href="javascript:void(0)">-->
+                                <!--<i class="fa fa-plus"></i>-->
+                                <!--创建新角色-->
+                            <!--</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h4>SMTP 邮件服务</h4>
+                    <span>下列列表中显示所有已配置的SMTP邮件服务信息。</span>
+
+                    <br>
+                    <br>
+                    <table class="table table-striped  table-hover">
+                        <thead>
+                            <th>名称</th>
+                            <th>明细</th>
+                            <th style="width:80px">状态</th>
+                            <th style="width:200px">操作</th>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td >
+                                <strong>iASPEC net</strong><br>
+                                <span>iaspec net mail server</span>
+                            </td>
+                            <td>
+                                <dl class="dl-horizontal">
+                                    <dt>From</dt>
+                                    <dd>manage@iaspec.net</dd>
+                                    <dt>Prefix</dt>
+                                    <dd>[DTMS]</dd>
+                                    <dt>Host</dt>
+                                    <dd>127.0.0.1</dd>
+                                    <dt>SMTP Port</dt>
+                                    <dd>25</dd>
+                                    <dt>Username</dt>
+                                    <dd>manage</dd>
+                                </dl>
+                            </td>
+                            <td>
+                               <span class="label label-success">启用</span>
+                            </td>
+                            <td>
+                               <a href="javascript:void(0);">修改</a>
+                                <a href="javascript:void(0);">删除</a>
+                                <a href="javascript:void(0);">发送测试邮件</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td >
+                                <strong>ECP Inernal</strong><br>
+                                <span>ecp internal mail server</span>
+                            </td>
+                            <td>
+                                <dl class="dl-horizontal">
+                                    <dt>From</dt>
+                                    <dd>manage@ecp.com</dd>
+                                    <dt>Prefix</dt>
+                                    <dd>[DTMS]</dd>
+                                    <dt>Host</dt>
+                                    <dd>127.0.0.1</dd>
+                                    <dt>SMTP Port</dt>
+                                    <dd>25</dd>
+                                    <dt>Username</dt>
+                                    <dd>manage</dd>
+                                </dl>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);">设为默认</a>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);">修改</a>
+                                <a href="javascript:void(0);">删除</a>
+                                <a href="javascript:void(0);">发送测试邮件</a>
+
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- end widget content -->
+        </div>
+        <!-- end widget div -->
+        </div>
+        <!-- end widget -->
+    </article>
+
+</div>
+<!-- end row -->
+
+
+<script type="text/javascript">
+
+    // DO NOT REMOVE : GLOBAL FUNCTIONS!
+    pageSetUp();
+
+    $("td > a:contains('删除')").click(function(e) {
+        $.smallBox({
+            title : "提示信息!",
+            content : "删除配置信息后，系统将取消发送email功能，直到再次启用一个配置。<br>确认删除配置信息吗? <p class='text-align-right'><a href='javascript:void(0);' onclick='noAnswer();' class='btn btn-danger btn-sm'>是</a> <a href='javascript:void(0);'  class='btn btn-primary btn-sm'>否</a></p>",
+            color : "#296191",
+            //timeout: 8000,
+            icon : "fa fa-bell swing animated"
+        });
+    });
+
+    function noAnswer() {
+
+        $.smallBox({
+            title : "已经删除！",
+            content : "",
+            color : "#A65858",
+            iconSmall : "fa fa-times",
+            timeout : 3000
+        });
+
+    }
+</script>
+
+</body>
+
+</html>

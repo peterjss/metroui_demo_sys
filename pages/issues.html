@@ -1,0 +1,1448 @@
+<style>
+    div.dataTables_filter {
+        left: 0px;
+        position: absolute;
+        top: -52px;
+    }
+
+    div.dataTables_length {
+        position: absolute;
+        right: 0px;
+        top: -52px;
+    }
+
+    .dtable.dropdown-menu {
+        top: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
+        margin-left: 0px;
+    }
+
+    .nowrap-inline{
+        /*white-space: nowrap;*/
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        float:left;
+    }
+    .nowrap-inline .checkbox-inline span{
+        /*white-space: nowrap;*/
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        /*overflow: hidden;*/
+    }
+    .outline {
+        float:left;
+        width:100%;
+    }
+</style>
+
+<!-- Bread crumb is created dynamically -->
+<!-- row -->
+<div class="row">
+    <!-- col -->
+    <!-- end col -->
+</div>
+<!-- end row -->
+
+<!-- row -->
+<div class="row">
+
+<!-- widget grid -->
+<section id="widget-grid" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+<!-- Widget ID (each widget will need unique ID)-->
+<div class="jarviswidget" id="wid-id-1" data-widget-colorbutton="false" data-widget-editbutton="false"
+     data-widget-fullscreenbutton="false" data-widget-deletebutton="false">
+<!-- widget options:
+    usage: <div class="jarviswidget" id="wid-id-0" data-widget-editbutton="false">
+    data-widget-colorbutton="false"
+    data-widget-editbutton="false"
+    data-widget-togglebutton="false"
+    data-widget-deletebutton="false"
+    data-widget-fullscreenbutton="false"
+    data-widget-custombutton="false"
+    data-widget-collapsed="true"
+    data-widget-sortable="false"
+-->
+<header>
+    <h2>
+        <strong>缺陷</strong>
+        <span class="hidden-mobile hidden-tablet"><i> - 搜索条件：IDTS + [Peter Li, Varson] + [模板缺陷, 测试缺陷]</i></span>
+    </h2>
+
+    <div class="widget-toolbar">
+        <a href="#pages/issues_new.html" class="btn btn-primary"><i
+                class="fa fa-lg fa-plus"></i>
+            <span class="hidden-mobile hidden-tablet">创建缺陷</span></a>
+    </div>
+    <ul id="widget-tab-1" class="nav  nav-tabs pull-right">
+        <!--nav-pills-->
+        <li class="active">
+            <a data-toggle="tab" href="#hr1"> <i class="fa fa-lg fa-search"></i> <span
+                    class="hidden-mobile hidden-tablet"> 查询缺陷 </span> </a>
+        </li>
+        <!--<li>-->
+        <!--<a data-toggle="tab" href="#hr2"> <i class="fa fa-lg fa-plus"></i> <span class="hidden-mobile hidden-tablet"> 创建项目 </span></a>-->
+        <!--</li>-->
+    </ul>
+
+</header>
+
+<!-- widget div-->
+<div>
+    <!-- widget edit box -->
+    <div class="jarviswidget-editbox">
+        <!-- This area used as dropdown edit box -->
+    </div>
+    <!-- end widget edit box -->
+
+    <!-- widget content -->
+    <div class="widget-body no-padding">
+        <!-- widget body text-->
+        <div class="tab-content padding-10">
+            <div class="tab-pane fade in active" id="hr1">
+                <form>
+                    <!--<fieldset>-->
+
+                    <div class="row">
+                        <!--<fieldset>-->
+                        <!--<section class="col col-3">-->
+                        <!--<label class="label">项目名包含：</label>-->
+                        <!--<label class="input">-->
+                        <!--<input class="" type="text" placeholder="Default input">-->
+                        <!--</label>-->
+                        <!--</section>-->
+                        <!--<section class="col col-3">-->
+                        <!--<label class="label">负责人包含：</label>-->
+                        <!--<label class="input">-->
+                        <!--<input class="" type="text" placeholder="Default input">-->
+                        <!--</label>-->
+                        <div class="col-sm-6 col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label>项目：</label>
+                                <select multiple style="width:100%" class="select2">
+                                    <optgroup label="ZH/iASPEC">
+                                        <option value="PT" selected="selected">IDTS</option>
+                                        <option value="WD">TEST</option>
+                                        <option value="VS">KOODOO</option>
+                                    </optgroup>
+                                    <optgroup label="HK">
+                                        <option value="CA">FFAA</option>
+                                        <option value="NV">FFBB</option>
+                                        <option value="OR">FFCC</option>
+                                        <option value="WA">FFDD</option>
+                                    </optgroup>
+                                    <optgroup label="NanH">
+                                        <option value="AZ">JJAP</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label>接受人：</label>
+                                <select multiple style="width:100%" class="select2">
+                                    <optgroup label="ZH/iASPEC">
+                                        <option value="PT" selected="selected">Peter Li</option>
+                                        <option value="WD" selected="selected">Wade</option>
+                                        <option value="VS">Varson</option>
+                                    </optgroup>
+                                    <optgroup label="HK">
+                                        <option value="CA">Fu</option>
+                                        <option value="NV">Richard</option>
+                                        <option value="OR">Kevin</option>
+                                        <option value="WA">Ams</option>
+                                    </optgroup>
+                                    <optgroup label="NanH">
+                                        <option value="AZ">Jak</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label>标签：</label>
+                                <input class="form-control tagsinput" value="模板缺陷,测试缺陷" data-role="tagsinput"/>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label>状态：</label>
+                                <select multiple style="width:100%" class="select2">
+                                    <optgroup label="ZH/iASPEC">
+                                        <option value="PT">新建</option>
+                                        <option value="WD">打开</option>
+                                        <option value="VS">正在进行</option>
+                                        <option value="VS">完成</option>
+                                        <option value="VS">重新打开</option>
+                                        <option value="VS">关闭</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!--</fieldset>-->
+                        <!--</section>-->
+                    </div>
+                    <div class="row">
+                        <!--<fieldset>-->
+                        <!--<section class="col col-3">-->
+                        <!--<label class="label">项目名包含：</label>-->
+                        <!--<label class="input">-->
+                        <!--<input class="" type="text" placeholder="Default input">-->
+                        <!--</label>-->
+                        <!--</section>-->
+                        <!--<section class="col col-3">-->
+                        <!--<label class="label">负责人包含：</label>-->
+                        <!--<label class="input">-->
+                        <!--<input class="" type="text" placeholder="Default input">-->
+                        <!--</label>-->
+                        <div class="col-sm-6 col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label>优先级：</label>
+                                <select multiple style="width:100%" class="select2">
+                                    <optgroup label="ZH/iASPEC">
+                                        <option value="PT">严重</option>
+                                        <option value="WD">重要</option>
+                                        <option value="VS">一般</option>
+                                        <option value="VS">不重要</option>
+                                        <option value="VS">微小</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label>提交人：</label>
+
+                                <select multiple style="width:100%" class="select2">
+                                    <optgroup label="ZH/iASPEC">
+                                        <option value="PT">Peter Li</option>
+                                        <option value="WD" selected="selected">Wade</option>
+                                        <option value="VS">Varson</option>
+                                    </optgroup>
+                                    <optgroup label="HK">
+                                        <option value="CA">Fu</option>
+                                        <option value="NV">Richard</option>
+                                        <option value="OR">Kevin</option>
+                                        <option value="WA">Ams</option>
+                                    </optgroup>
+                                    <optgroup label="NanH">
+                                        <option value="AZ">Jak</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label>完成日期：</label>
+
+                                <div class="input-group">
+                                    <input type="text" name="mydate" placeholder="Select a date"
+                                           class="form-control datepicker" data-dateformat="dd/mm/yy">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label>更新日期：</label>
+
+                                <div class="input-group">
+                                    <input type="text" name="mydate" placeholder="Select a date"
+                                           class="form-control datepicker" data-dateformat="dd/mm/yy">
+                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--</fieldset>-->
+                        <!--</section>-->
+                    </div>
+                    <!--</fieldset>-->
+                    <div id="moreConditions" class="well " style="display: none;margin-top:5px;">
+                    <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <!--<h4>更多标签</h4>-->
+                    <ul class="nav nav-tabs  tabs-pull-right" id="demo-pill-nav">
+                        <!--<li class="pull-left">-->
+                        <!--<a href="javascript:void(0);"> 更多标签 </a>-->
+                        <!--</li>-->
+
+                        <li class="active">
+                            <a href="#tab-r1" data-toggle="tab"><span class="badge bg-color-blue txt-color-white">12</span> 卡产品 </a>
+                        </li>
+                        <li>
+                            <a href="#tab-r2" data-toggle="tab"><span class="badge bg-color-blueDark txt-color-white">3</span> 系统产品</a>
+                        </li>
+                        <li>
+                            <a href="#tab-r3" data-toggle="tab"><span class="badge bg-color-greenLight txt-color-white">0</span> 终端产品</a>
+                        </li>
+                        <li>
+                            <a href="#tab-r4" data-toggle="tab"><span class="badge bg-color-orange txt-color-white">0</span> 白盒</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content ">
+
+                    <div class="tab-pane active" id="tab-r1">
+                    <table class="table table-hover table-noborder ">
+                    <tbody>
+                    <tr>
+                        <td style="width:80px">部门</td>
+                        <td >
+                            <div class="nin nowrap-inline">
+                                <span class="nout">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>COS一部</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>COS二部</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>应用开发</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>个人化中心</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>技术拓展部</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>国际部技术组</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>产品部</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>增值业务部</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>测试组</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>客户</span>
+                                    </label>
+                                </span>
+                            </div>
+                            <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="80">项目类别</td>
+                        <td>
+                            <div class="nin nowrap-inline">
+                                <span class="nout">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>平台项目</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>产品项目</span>
+                                    </label>
+                                </span>
+                            </div>
+                            <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="80">产品分类</td>
+                        <td>
+                            <div class="nin nowrap-inline">
+                                <span class="nout">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>电信</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>金融</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>社保</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>一卡通</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>建设事业</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>健康卡</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>移动支付</span>
+                                    </label>
+                                </span>
+                            </div>
+                            <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="80">平台分类</td>
+                        <td>
+                            <div class="nin nowrap-inline">
+                                <span class="nout">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>Native</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>JAVA</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>GP</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>N3</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>M1</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>系统</span>
+                                    </label>
+                                </span>
+                            </div>
+                            <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="80">技术分类</td>
+                        <td>
+                            <div class="nin nowrap-inline">
+                                <span class="nout">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>电气特性</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>接触协议</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>非接协议</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>天线</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>USB协议</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>SWP协议</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>HCI API</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>BIP</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>Https协议</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>CAP-TP</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>GMS</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>CDMA</span>
+                                    </label>
+                                </span>
+                            </div>
+                            <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="80">故障分类</td>
+                        <td >
+                            <div class="nin nowrap-inline">
+                                <span class="nout">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>功能缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>性能缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>安全缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>稳定性</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>兼容性</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>物理</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>需求缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>COS缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>文件系统</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>应用缺陷</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>个人化</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>芯片</span>
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" class="checkbox style-0">
+                                        <span>终端</span>
+                                    </label>
+                                </span>
+                            </div>
+                            <a href="javascript:void(0);" class="btn btn-xs plus"><i class="fa fa-plus"></i></a>
+                            <a href="javascript:void(0);" class="btn btn-xs  minus" style="display: none;"><i class="fa fa-minus"></i></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    </div>
+                    <div class="tab-pane padding-10" id="tab-r2">
+                        <p>
+                            在这里显示 系统产品 查询条件。
+                        </p>
+                    </div>
+                    <div class="tab-pane padding-10" id="tab-r3">
+                        <p>
+                            在这里显示 终端产品 查询条件。
+                        </p>
+                    </div>
+                    <div class="tab-pane padding-10" id="tab-r4">
+                        <p>
+                            在这里显示 白盒 查询条件。
+                        </p>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <span class="onoffswitch-title">
+                                <i class="fa fa-magnet"></i> 精确匹配
+                            </span>
+                            <span class="onoffswitch">
+                                <input id="myonoffswitch" class="onoffswitch-checkbox" type="checkbox" name="onoffswitch">
+                                <label class="onoffswitch-label" for="myonoffswitch">
+                                    <span class="onoffswitch-inner" data-swchoff-text="NO" data-swchon-text="YES"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </span>
+                        </div>
+                    </div>
+
+                    </div>
+
+                </form>
+                <br>
+                <div>
+                    <button class="btn btn-default"><i class="fa fa-search"></i> 查询</button>
+                    <a href="javascript:void(0);">重置查询条件</a>
+                    <div class="pull-right">
+                        <!--<a href="javascript:void(0);">更多搜索条件</a><i class="fa fa-caret-down fa-lg"></i>-->
+                        <a href="#" id="show_moreConditions" class="dropdown-toggle" data-toggle="dropdown">更多搜索条件<b class="caret"></b></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="hr2">
+            </div>
+        </div>
+        <!-- end widget body text-->
+
+    </div>
+    <!-- end widget content -->
+
+</div>
+<!-- end widget div -->
+
+</div>
+<!-- end widget -->
+</section>
+</div>
+<!-- end row -->
+
+<!-- Create Issue Modal Dialog -->
+<div class="modal fade" id="addIssueModal" metod="post" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">新建缺陷</h4>
+            </div>
+
+            <div class="modal-body">
+                <form id="user-form" class="form-horizontal vlidate-form client-form">
+                    <!--<div class="row">-->
+                    <fieldset>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 项目 <span class="txt-color-red">*</span></label>
+
+                                    <div class="col-md-5">
+                                        <select style="width:100%" class="select2">
+                                            <optgroup label="ZH/iASPEC">
+                                                <option value="PT" selected="selected">IDTS</option>
+                                                <option value="WD">TEST</option>
+                                                <option value="VS">KOODOO</option>
+                                            </optgroup>
+                                            <optgroup label="HK">
+                                                <option value="CA">FFAA</option>
+                                                <option value="NV">FFBB</option>
+                                                <option value="OR">FFCC</option>
+                                                <option value="WA">FFDD</option>
+                                            </optgroup>
+                                            <optgroup label="NanH">
+                                                <option value="AZ">JJAP</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 缺陷类型 <span class="txt-color-red">*</span></label>
+
+                                    <div class="col-md-5">
+                                        <select style="width:100%" class="select2">
+                                            <option value="PT">Bug</option>
+                                            <option value="WD">任务</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 概述 <span class="txt-color-red">*</span></label>
+
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 优先级</label>
+
+                                    <div class="col-md-5">
+                                        <select style="width:100%" class="select2">
+                                            <option value="PT" selected="selected">严重</option>
+                                            <option value="WD">重要</option>
+                                            <option value="VS">一般</option>
+                                            <option value="VS">不重要</option>
+                                            <option value="VS">微小</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 截止日期</label>
+
+                                    <div class="col-md-4">
+                                        <div class="input-group">
+                                            <input type="text" name="mydate" placeholder="Select a date"
+                                                   class="form-control datepicker" data-dateformat="dd/mm/yy">
+                                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 影响版本 </label>
+
+                                    <div class="col-md-8">
+                                        <select style="width:100%" class="select2">
+                                            <option value="PT">0.1</option>
+                                            <option value="WD">1</option>
+                                            <option value="VS">1</option>
+                                            <option value="VS">3</option>
+                                            <option value="VS">4</option>
+                                        </select>
+
+                                        <div class="note">
+                                            输入版本可以获得下拉匹配列表，或者直接打开下拉菜单来进行选择。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 修复版本 </label>
+
+                                    <div class="col-md-8">
+                                        <select style="width:100%" class="select2">
+                                            <option value="PT">0.1</option>
+                                            <option value="WD">1</option>
+                                            <option value="VS">1</option>
+                                            <option value="VS">3</option>
+                                            <option value="VS">4</option>
+                                        </select>
+
+                                        <div class="note">
+                                            输入版本可以获得下拉匹配列表，或者直接打开下拉菜单来进行选择。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 分配给</label>
+
+                                    <div class="col-md-8">
+                                        <select style="width:100%" class="select2">
+                                            <optgroup label="ZH/iASPEC">
+                                                <option value="PT">Peter Li</option>
+                                                <option value="WD">Wade</option>
+                                                <option value="VS">Varson</option>
+                                            </optgroup>
+                                            <optgroup label="HK">
+                                                <option value="CA">Fu</option>
+                                                <option value="NV">Richard</option>
+                                                <option value="OR">Kevin</option>
+                                                <option value="WA">Ams</option>
+                                            </optgroup>
+                                            <optgroup label="NanH">
+                                                <option value="AZ">Jak</option>
+                                            </optgroup>
+                                        </select>
+                                        <a href="#">分配给我</a>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 提交者</label>
+
+                                    <div class="col-md-8">
+                                        <select style="width:100%" class="select2">
+                                            <optgroup label="ZH/iASPEC">
+                                                <option value="PT" selected="selected">Peter Li</option>
+                                                <option value="WD">Wade</option>
+                                                <option value="VS">Varson</option>
+                                            </optgroup>
+                                            <optgroup label="HK">
+                                                <option value="CA">Fu</option>
+                                                <option value="NV">Richard</option>
+                                                <option value="OR">Kevin</option>
+                                                <option value="WA">Ams</option>
+                                            </optgroup>
+                                            <optgroup label="NanH">
+                                                <option value="AZ">Jak</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 环境</label>
+
+                                    <div class="col-md-8">
+                                        <textarea class="form-control" rows="4"></textarea>
+
+                                        <div class="note">
+                                            例如 操作系统，软件平台，特殊硬件使用等。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 描述 </label>
+
+                                    <div class="col-md-8">
+                                        <textarea class="form-control" rows="6"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 最初估算 </label>
+
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control"/> <span>(3w 4d 12h)</span>
+
+                                        <div class="note">
+                                            对参与这个缺陷所花费的时间做一个初步估算。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 仍需估算 </label>
+
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control"/> <span class="left">(3w 4d 12h)</span>
+
+                                        <div class="note">
+                                            对这个缺陷还需要花费的时间做一个估算。
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 附件</label>
+
+                                    <div class="col-md-8">
+                                        <input type="file" class="btn btn-default"/>
+
+                                        <div class="note">
+                                            最大上传文件大小为 10.00 MB
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label"> 标签</label>
+
+                                    <div class="col-md-8">
+                                        <input class="form-control tagsinput" data-role="tagsinput"/>
+
+                                        <div class="note">
+                                            您可以输入字符创建一个标签，或者直接选择一个已存在的标签。
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    取消
+                </button>
+                <button type="submit" class="btn btn-primary">
+                    提交
+                </button>
+            </div>
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- row -->
+<div class="row">
+<div class="col-sm-12">
+<div class="well">
+<div class="widget-body-toolbar">
+
+</div>
+<table id="dt_issues" class="table table-striped table-hover">
+
+<thead>
+<tr>
+    <th width="20">T</th>
+    <th width="80">编号</th>
+    <th class="hidden-xs hidden-sm">概况</th>
+    <th>分配给</th>
+    <th class="hidden-xs hidden-sm">提交者</th>
+    <th width="100">优先级</th>
+    <th width="100">状态</th>
+    <th class="hidden-xs hidden-sm">创建时间</th>
+    <th width="40">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td><i class="fa fa-rocket txt-color-green"></i></td>
+    <td><a href="#pages/issues_specific.html">IDTS-1</a></td>
+    <td class="hidden-xs hidden-sm"><a href="#pages/issues_specific.html">UI 角色管理 字符校验.</a></td>
+    <td>
+        <a href="#pages/profile.html">
+            Peter Li
+        </a>
+    </td>
+    <td class="hidden-xs hidden-sm">
+        <a href="#pages/profile.html">
+            Wade
+        </a>
+    </td>
+    <td>
+        <i class="fa fa-arrow-up txt-color-red"></i>
+    </td>
+    <td>
+         关闭
+    </td>
+    <td class="hidden-xs hidden-sm">2014-03-07</td>
+    <td>
+        <div>
+            <a class="btn btn-primary btn-xs dropdown-toggle " data-toggle="dropdown">
+                <i class="fa fa-gear"></i>
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dtable dropdown-menu pull-right">
+                <li>
+                    <a href="#pages/issues_specific.html">查看缺陷</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);">开始</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">完成</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);">修改缺陷</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">分配</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">添加评论</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">添加附件</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">移动缺陷</a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td><i class="fa fa-rocket txt-color-green"></i></td>
+    <td><a href="#pages/issues_specific.html">IDTS-1</a></td>
+    <td class="hidden-xs hidden-sm"><a href="#pages/issues_specific.html">UI 角色管理 字符校验.</a></td>
+    <td>
+        <a href="#pages/profile.html">
+            Peter Li
+        </a>
+    </td>
+    <td class="hidden-xs hidden-sm">
+        <a href="#pages/profile.html">
+            Wade
+        </a>
+    </td>
+    <td>
+        <i class="fa fa-arrow-up txt-color-red"></i>
+    </td>
+    <td>
+         审核中
+    </td>
+    <td class="hidden-xs hidden-sm">2014-03-07</td>
+    <td>
+        <div>
+            <a class="btn btn-primary btn-xs dropdown-toggle " data-toggle="dropdown">
+                <i class="fa fa-gear"></i>
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dtable dropdown-menu pull-right">
+                <li>
+                    <a href="#pages/issues_specific.html">查看缺陷</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);">开始</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">完成</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);">修改缺陷</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">分配</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">添加评论</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">添加附件</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">移动缺陷</a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td><i class="fa fa-rocket txt-color-green"></i></td>
+    <td><a href="#pages/issues_specific.html">IDTS-1</a></td>
+    <td class="hidden-xs hidden-sm"><a href="#pages/issues_specific.html">UI 角色管理 字符校验.</a></td>
+    <td>
+        <a href="#pages/profile.html">
+            Peter Li
+        </a>
+    </td>
+    <td class="hidden-xs hidden-sm">
+        <a href="#pages/profile.html">
+            Wade
+        </a>
+    </td>
+    <td>
+        <i class="fa fa-arrow-down txt-color-green"></i>
+    </td>
+    <td>
+         打开
+    </td>
+    <td class="hidden-xs hidden-sm">2014-03-07</td>
+    <td>
+        <div>
+            <a class="btn btn-primary btn-xs dropdown-toggle " data-toggle="dropdown">
+                <i class="fa fa-gear"></i>
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dtable dropdown-menu pull-right">
+                <li>
+                    <a href="#pages/issues_specific.html">查看缺陷</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);">开始</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">完成</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);">修改缺陷</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">分配</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">添加评论</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">添加附件</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">移动缺陷</a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td><i class="fa fa-rocket txt-color-green"></i></td>
+    <td><a href="#pages/issues_specific.html">IDTS-1</a></td>
+    <td class="hidden-xs hidden-sm"><a href="#pages/issues_specific.html">UI 角色管理 字符校验.</a></td>
+    <td>
+        <a href="#pages/profile.html">
+            Peter Li
+        </a>
+    </td>
+    <td class="hidden-xs hidden-sm">
+        <a href="#pages/profile.html">
+            Wade
+        </a>
+    </td>
+    <td>
+        <i class="fa fa-minus  text-warning"></i>
+    </td>
+    <td>
+        关闭
+    </td>
+    <td class="hidden-xs hidden-sm">2014-03-07</td>
+    <td>
+        <div>
+            <a class="btn btn-primary btn-xs dropdown-toggle " data-toggle="dropdown">
+                <i class="fa fa-gear"></i>
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dtable dropdown-menu pull-right">
+                <li>
+                    <a href="#pages/issues_specific.html">查看缺陷</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);">开始</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">完成</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);">修改缺陷</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">分配</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">添加评论</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">添加附件</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">移动缺陷</a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td><i class="fa fa-rocket txt-color-green"></i></td>
+    <td><a href="#pages/issues_specific.html">IDTS-1</a></td>
+    <td class="hidden-xs hidden-sm"><a href="#pages/issues_specific.html">UI 角色管理 字符校验.</a></td>
+    <td>
+        <a href="#pages/profile.html">
+            Peter Li
+        </a>
+    </td>
+    <td class="hidden-xs hidden-sm">
+        <a href="#pages/profile.html">
+            Wade
+        </a>
+    </td>
+    <td>
+        <i class="fa fa-arrow-up txt-color-red"></i>
+    </td>
+    <td>
+         打开
+    </td>
+    <td class="hidden-xs hidden-sm">2014-03-07</td>
+    <td>
+        <div>
+            <a class="btn btn-primary btn-xs dropdown-toggle " data-toggle="dropdown">
+                <i class="fa fa-gear"></i>
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dtable dropdown-menu pull-right">
+                <li>
+                    <a href="#pages/issues_specific.html">查看缺陷</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);">开始</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">完成</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);">修改缺陷</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">分配</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">添加评论</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">添加附件</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">移动缺陷</a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr>
+<tr>
+    <td><i class="fa fa-rocket txt-color-green"></i></td>
+    <td><a href="#pages/issues_specific.html">IDTS-1</a></td>
+    <td class="hidden-xs hidden-sm"><a href="#pages/issues_specific.html">UI 角色管理 字符校验.</a></td>
+    <td>
+        <a href="#pages/profile.html">
+            Peter Li
+        </a>
+    </td>
+    <td class="hidden-xs hidden-sm">
+        <a href="#pages/profile.html">
+            Wade
+        </a>
+    </td>
+    <td>
+        <i class="fa fa-arrow-up txt-color-red"></i>
+    </td>
+    <td>
+      打开
+    </td>
+    <td class="hidden-xs hidden-sm">2014-03-07</td>
+    <td>
+        <div>
+            <a class="btn btn-primary btn-xs dropdown-toggle " data-toggle="dropdown">
+                <i class="fa fa-gear"></i>
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dtable dropdown-menu pull-right">
+                <li>
+                    <a href="#pages/issues_specific.html">查看缺陷</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);">开始</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">完成</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:void(0);">修改缺陷</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">分配</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">添加评论</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">添加附件</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">移动缺陷</a>
+                </li>
+            </ul>
+        </div>
+    </td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<!-- end well -->
+</div>
+</div>
+<!-- end row -->
+
+<!--<script src="../js/plugin/bootstrap-tags/bootstrap-tagsinput.min.js"></script>-->
+
+
+<script type="text/javascript">
+
+    // DO NOT REMOVE : GLOBAL FUNCTIONS!
+    pageSetUp();
+
+    /* remove previous elems */
+
+//    if ($('.DTTT_dropdown.dropdown-menu').length) {
+//        $('.DTTT_dropdown.dropdown-menu').remove();
+//    }
+
+    loadScript("js/plugin/x-editable/x-editable.min.js", loadDataTableScripts);
+
+
+    function loadDataTableScripts() {
+
+        loadScript("js/plugin/datatables/jquery.dataTables-cust.min.js", dt_2);
+
+        function dt_2() {
+            loadScript("js/plugin/datatables/ColReorder.min.js", dt_3);
+        }
+
+        function dt_3() {
+            loadScript("js/plugin/datatables/FixedColumns.min.js", dt_4);
+        }
+
+        function dt_4() {
+            loadScript("js/plugin/datatables/ColVis.min.js", dt_5);
+        }
+
+        function dt_5() {
+            loadScript("js/plugin/datatables/ZeroClipboard.js", dt_6);
+        }
+
+        function dt_6() {
+            loadScript("js/plugin/datatables/media/js/TableTools.min.js", dt_7);
+        }
+
+        function dt_7() {
+            loadScript("js/plugin/datatables/DT_bootstrap.js", tagsinput);
+        }
+
+        function tagsinput() {
+            loadScript("js/plugin/bootstrap-tags/bootstrap-tagsinput.min.js", runDataTables);
+        }
+    }
+
+    function runDataTables() {
+        /*
+         * BASIC
+         */
+        $('#dt_issues').dataTable({
+            "bSortCellsTop": false,
+            "bFilter": false,
+            "bLengthChange": false
+            //"sPaginationType" : "bootstrap_full"
+        });
+
+        /* END BASIC */
+
+        /* event for delete button */
+        $('#dt_issues tbody > tr').find('td:last> a:last').click(function () {
+            deleteIssue({name: 'IDTS'});
+        });
+
+        $("#issue-form").validate({
+            // Rules for form validation
+            rules: {
+                username: {
+                    required: true
+                },
+                fullname: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                }, password: {
+                    required: true
+                }, passwordConfirm: {
+                    required: true,
+                    equalTo: '#password'
+                }
+            },// Messages for form
+            validationmessages: {
+                username: {
+                    required: '请输入用户名'
+                },
+                email: {
+                    required: '请输入您的 Email 地址',
+                    email: '请正确输入 Email 地址'
+                }, password: {
+                    required: '请输入密码。'
+                }, passwordConfirm: {
+                    required: '请再次输入密码',
+                    equalTo: '输入与上次不一致，请确认两次输入的密码一致'
+                }, fullname: {
+                    required: '请输入用户全名'
+                }
+            },// Ajax form submition
+            submitHandler: function (form) {
+                $(form).ajaxSubmit({
+                    success: function () {
+                        $("#issue-form").addClass('submited');
+                    }
+                });
+            },// Do not change code below
+            errorPlacement: function (error, element) {
+                error.insertAfter(element.parent());
+            }
+        });
+    }
+    function deleteIssue(element) {
+        var $this = $(element);
+        $.targetElement = element.name;
+        $.SmartMessageBox({
+            title: "<i class='fa fa-sign-out txt-color-orangeDark'></i> 删除 <span class='txt-color-orangeDark'><strong>" + $.targetElement + "</strong></span> ?",
+            content: $.confirmMSG || "删除项目意味着将项目从系统中永远移除，包括一切相关信息，是否真的确认删除此项目？",
+            buttons: '[否][是]'
+
+        }, function (ButtonPressed) {
+            if (ButtonPressed == "是") {
+                setTimeout(closedthis, 500);
+            }
+        });
+//                e.preventDefault();
+    }
+    function closedthis() {
+        $.smallBox({
+            title: "操作成功！已经成功的删除了项目" + $.targetElement + " 以及与其相关联的资料。",
+            content: "<i class='fa fa-clock-o'></i> <i>这条消息将在5秒钟后自动消失!</i>",
+            color: "#659265",
+            iconSmall: "fa fa-check fa-2x fadeInRight animated",
+            timeout: 5000
+        });
+    }
+    $('#show_moreConditions').click(function(e){
+        $('#moreConditions').slideToggle();
+    });
+
+    $('#moreConditions').resize(function() {
+        table_line_width();
+    });
+
+    function table_line_width(){
+        var div = $('#moreConditions .table div.nin');
+        var sp = $('#moreConditions .table div.nin > span.nout');
+
+        div.each(function(index,ele) {
+            div.width($('#main').width() - 210);
+            var btn_plus =  $(this).parent().find('a.plus');
+            var btn_minus =  $(this).parent().find('a.minus');
+
+            console.log('index'+index);
+            if($(this).width() > $(this).children('span.nout').width()){
+                btn_plus.hide();
+            } else {
+                if(div.hasClass('nowrap-inline')) {
+                    btn_plus.show();
+                    btn_minus.hide();
+                } else {
+                    btn_plus.hide();
+                    btn_minus.show();
+                }
+            }
+        });
+    }
+
+    $('#moreConditions .table td a.plus').click(function(e){
+//        var div = $('#moreConditions .table div.nowrap-inline');
+        var div = $(this).parent('td').find('div.nin');
+        if(div.hasClass('nowrap-inline')){
+            div.removeClass('nowrap-inline');
+            div.addClass('outline');
+        }else{
+            div.addClass('nowrap-inline');
+            div.removeClass('outline');
+        }
+        $(this).toggle();
+        $(this).next('a.minus').toggle();
+    });
+
+    $('#moreConditions .table td a.minus').click(function(e){
+        var div = $(this).parent('td').find('div.nin');
+        div.removeClass('outline');
+        div.addClass('nowrap-inline');
+        $(this).toggle();
+        $(this).prev('a.plus').toggle();
+    });
+</script>
+
+</body>
+
+</html>

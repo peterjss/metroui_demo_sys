@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+
+    <title> UI Demo </title>
+
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <!-- Basic Styles -->
+    <link href="css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" media="screen" rel="stylesheet" type="text/css">
+    <!-- SmartAdmin Styles : Please note (smartadmin-production.css) was created using LESS variables -->
+    <link href="css/smartadmin-production.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="css/smartadmin-skins.css" media="screen" rel="stylesheet" type="text/css">
+    <!-- Demo purpose only: goes with demo.js, you can delete this css when designing your own WebApp -->
+    <link href="css/demo.css" media="screen" rel="stylesheet" type="text/css">
+    <!-- FAVICONS -->
+    <link href="img/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="img/favicon/favicon.ico" rel="icon" type="image/x-icon">
+    <!-- GOOGLE FONT -->
+    <!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700" rel="stylesheet">-->
+
+    <!-- Specifying a Webpage Icon for Web Clip
+         Ref: https://developer.apple.com/library/ios/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html -->
+    <link href="img/splash/sptouch-icon-iphone.png" rel="apple-touch-icon">
+    <link href="img/splash/touch-icon-ipad.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="img/splash/touch-icon-iphone-retina.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="img/splash/touch-icon-ipad-retina.png" rel="apple-touch-icon" sizes="152x152">
+    <!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!-- Startup image for web apps -->
+    <link href="img/splash/ipad-landscape.png"
+          media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)"
+          rel="apple-touch-startup-image">
+    <link href="img/splash/ipad-portrait.png"
+          media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)"
+          rel="apple-touch-startup-image">
+    <link href="img/splash/iphone.png" media="screen and (max-device-width: 320px)" rel="apple-touch-startup-image">
+    <style>
+        .login-info a.btn {
+            color:#FFFFFF;
+            width:21px;
+            margin: 3px 0 3px 3px;
+        }
+        .login-info a.btn :hover {
+            color: #F3F3F3;
+        }
+
+        .minified  .login-info .shortbtn a.btn{
+            height:10px;
+            width:15px;
+            margin: 1px;
+        }
+
+        .minified .login-info {
+            height: 105px;
+        }
+
+        .minified .login-info a span, .minified .login-info a i {
+            display: block;
+        }
+
+    </style>
+</head>
+<body class="">
+
+<!-- HEADER -->
+<!-- possible classes: minified, fixed-ribbon, fixed-header, fixed-width-->
+<div class="navbar navbar-default" id="navbar">
+    <div class="navbar-container" id="navbar-container">
+
+    <div class="navbar-header pull-left">
+        <!--<a href="#" id="show-shortcut" class="nav-top-appbtn pull-left">-->
+        <!--<i class="fa fa-cloud "></i>-->
+        <!--<ul class="nav ace-nav">-->
+        <!--<li>-->
+        <!--<a data-toggle="dropdown" class="dropdown-toggle" href="#">-->
+        <!--<i class="glyphicon glyphicon-tasks"></i>-->
+        <!--<span class="badge badge-grey">4</span>-->
+        <!--</a>-->
+        <!--</li>-->
+        <!--</ul>-->
+        <!--</a>-->
+        <ul class="nav ace-nav" style="width:50px;float:left;">
+            <li style="background-color: #438EB9;">
+                <a href="#" id="show-shortcut">
+                    <i class="fa fa-align-justify "></i>
+                </a>
+            </li>
+        </ul>
+        <a href="#" class="navbar-brand">
+            <!-- <img alt="DTMS" width="35px" src="img/logo-o.png" class="txt-color-white" style="margin-top:-5px;"> -->
+            <small >
+               ECP - 系统管理
+            </small>
+        </a><!-- /.brand -->
+
+    </div>
+    <!-- /.navbar-header -->
+
+    <div class="navbar-header pull-right" role="navigation">
+    <ul class="nav ace-nav">
+        <li class="grey">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <i class="glyphicon glyphicon-tasks"></i>
+                <span class="badge badge-grey">4</span>
+            </a>
+
+            <ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                <li class="dropdown-header">
+                    <i class="glyphicon glyphicon-ok"></i>
+                    还有4个任务完成
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">软件更新</span>
+                            <span class="pull-right">65%</span>
+                        </div>
+
+                        <div class="progress progress-xs ">
+                            <div style="width:65%" class="progress-bar "></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">硬件更新</span>
+                            <span class="pull-right">35%</span>
+                        </div>
+
+                        <div class="progress progress-xs ">
+                            <div style="width:35%" class="progress-bar progress-bar-danger"></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">单元测试</span>
+                            <span class="pull-right">15%</span>
+                        </div>
+
+                        <div class="progress progress-xs ">
+                            <div style="width:15%" class="progress-bar progress-bar-warning"></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                            <span class="pull-left">错误修复</span>
+                            <span class="pull-right">90%</span>
+                        </div>
+
+                        <div class="progress progress-xs progress-striped active">
+                            <div style="width:90%" class="progress-bar progress-bar-success"></div>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        查看任务详情
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="purple">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <i class="fa fa-bell  fa-icon-animated-bell"></i>
+                <span class="badge bg-color-red">8</span>
+            </a>
+
+            <ul class="pull-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+                <li class="dropdown-header">
+                    <i class="fa fa-warning"></i>
+                    8条通知
+                </li>
+
+                <li>
+                    <a href="#">
+                        <div class="clearfix">
+                                                <span class="pull-left">
+                                                    <button class="btn btn-xs bg-color-pink txt-color-white" href="#">
+                                                        <i class=" fa fa-comment fa-1x "></i>
+                                                    </button>
+                                                    新闻评论
+                                                </span>
+                            <span class="pull-right badge badge-info">+12</span>
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+
+                        <div class="clearfix">
+                                                <span class="pull-left">
+                                                    <!--<i class="btn btn-xs btn-primary icon-user"></i>-->
+                                                    <button class="btn btn-xs bg-color-blue txt-color-white" href="#">
+                                                        <i class=" fa fa-user fa-1x"></i>
+                                                    </button>
+                                                    切换为编辑登录..
+                                                    </span>
+                            <!--<span class="pull-right badge badge-info">+12</span>-->
+                        </div>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        查看所有通知
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="green">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <i class="fa fa-envelope fa-icon-animated-vertical"></i>
+                <span class="badge badge-success bg-color-teal ">5</span>
+            </a>
+
+            <ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                <li class="dropdown-header">
+                    <i class="fa fa-envelope-o"></i>
+                    5条消息
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="img/avatars/1.png" class="msg-photo" alt="Alex's Avatar"/>
+                                                <span class="msg-body">
+                                                    <span class="msg-title">
+                                                        <span class="txt-color-blue">Alex:</span>
+                                                        不知道写啥 ...
+                                                    </span>
+
+                                                    <span class="msg-time">
+                                                        <i class="fa fa-clock-o "></i>
+                                                        <span>1分钟以前</span>
+                                                    </span>
+                                                </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="img/avatars/3.png" class="msg-photo" alt="Susan's Avatar"/>
+                                                <span class="msg-body">
+                                                    <span class="msg-title">
+                                                        <span class="txt-color-blue">Susan:</span>
+                                                        不知道写啥...
+                                                    </span>
+
+                                                    <span class="msg-time">
+                                                        <i class="fa fa-clock-o"></i>
+                                                        <span>20分钟以前</span>
+                                                    </span>
+                                                </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="img/avatars/4.png" class="msg-photo" alt="Bob's Avatar"/>
+                                                <span class="msg-body">
+                                                    <span class="msg-title">
+                                                        <span class="txt-color-blue">Bob:</span>
+                                                        不知道写啥 ...
+                                                    </span>
+
+                                                    <span class="msg-time">
+                                                        <i class="fa fa-clock-o"></i>
+                                                        <span>下午3:15</span>
+                                                    </span>
+                                                </span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pages/inbox.html">
+                        查看所有消息
+                        <i class="fa fa-arrow-right "></i>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="light-blue">
+            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                <img class="nav-user-photo" src="img/avatars/sunny.png" alt="Jason's Photo"/>
+                                            <span class="user-info">
+                                                <small>欢迎光临,</small>
+                                                Peter Li
+                                            </span>
+                <i class="fa fa-sort-down"></i>
+            </a>
+
+            <ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                <li>
+                    <a href="lock.html">
+                        <i class="fa fa-cog"></i>
+                        设置
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#pages/profile.html">
+                        <i class="fa fa-user"></i>
+                        个人资料
+                    </a>
+                </li>
+
+                <li class="divider"></li>
+
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-power-off"></i>
+                        退出
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <!-- /.ace-nav -->
+    </div>
+<!-- /.navbar-header -->
+
+</div>
+<!-- /.container -->
+</div>
+
+<div>
+    <!-- Left panel : Navigation area -->
+    <!-- Note: This width of the aside area can be adjusted through LESS variables -->
+    <aside id="left-panel" style="height:auto;">
+        <!-- NAVIGATION : This navigation is also responsive
+
+       To make this navigation dynamic please make sure to link the node
+       (the reference to the nav > ul) after page load. Or the navigation
+       will not initialize.
+       -->
+
+
+
+        <nav>
+            <!-- NOTE: Notice the gaps after each icon usage <i></i>..
+            Please note that these links work a bit different than
+            traditional hre="" links. See documentation for details.
+            -->
+
+            <ul>
+
+                <li class="active">
+                    <a href="pages/sysinfo.html" title="系统信息"><i class="fa fa-lg fa-fw fa-desktop"></i> 系统信息</a>
+                </li>
+                <li>
+                    <a href="pages/sys_users.html" title="用户管理"><i class="fa fa-lg fa-fw fa-user"></i> 用户管理</a>
+                </li>
+                <li>
+                    <a href="pages/organization.html" title="组织机构"><i class="fa fa-lg fa-fw fa-sitemap"></i> 组织机构</a>
+                </li>
+                <li>
+                    <a href="pages/role.html" title="角色"><i class="fa fa-lg fa-fw fa-umbrella"></i> 角色</a>
+                </li>
+                <li>
+                    <a href="pages/email.html" title="Email 设定 "><i class="fa fa-lg fa-fw fa-envelope-o"></i> Email 设定 </a>
+                </li>
+                <li>
+                    <a href="pages/log.html" title="系统日志"><i class="fa fa-lg fa-fw fa-list-alt"></i> 系统日志 </a>
+                </li>
+            </ul>
+        </nav>
+        <span class="minifyme"> <i class="fa fa-arrow-circle-left hit"></i> </span>
+
+    </aside>
+    <!-- END NAVIGATION -->
+
+
+
+    <div id="main" role="main">
+
+        <!-- RIBBON -->
+        <div id="ribbon">
+            <span class="ribbon-button-alignment">
+                <span id="refresh" class="btn btn-ribbon" data-title="refresh" rel="tooltip" data-placement="bottom"
+                      data-original-title="<i class='text-warning fa fa-warning'></i> Warning! This will reset all your widget settings."
+                      data-html="true">
+                    <i class="fa fa-refresh"></i>
+                </span>
+            </span>
+
+            <!-- breadcrumb -->
+            <ol class="breadcrumb">
+                <li>首页</li>
+                <li>仪表盘</li>
+            </ol>
+            <!-- end breadcrumb -->
+
+            <!-- You can also add more buttons to the
+            ribbon for further usability
+
+            Example below:
+
+            <span class="ribbon-button-alignment pull-right">
+            <span id="search" class="btn btn-ribbon hidden-xs" data-title="search"><i class="fa-grid"></i> Change Grid</span>
+            <span id="add" class="btn btn-ribbon hidden-xs" data-title="add"><i class="fa-plus"></i> Add</span>
+            <span id="search" class="btn btn-ribbon" data-title="search"><i class="fa-search"></i> <span class="hidden-mobile">Search</span></span>
+            </span> -->
+        </div>
+        <!-- END RIBBON -->
+
+        <!-- MAIN CONTENT -->
+        <div id="content">
+
+        </div>
+        <!-- END MAIN CONTENT -->
+
+
+    </div>
+
+</div>
+
+<div id="footer" class="footer">
+    <footer> © 2014 iASPEC
+        <div class="pull-right">
+            <div class="inline-block">
+                <i class="txt-color-blue hidden-mobile">
+                    最后登入系统时间
+                    <i class="fa fa-clock-o"></i>
+                    52 分钟之前 
+                </i>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+
+<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
+Note: These tiles are completely responsive,
+you can add as many as you like
+-->
+<div id="shortcut">
+    <ul>
+                <li>
+            <a href="../ims/main.html" class="jarvismetro-tile big-cubes bg-color-blue">
+                <span class="iconbox">
+                    <i class="fa fa-user  fa-4x"></i>
+                    <span> 缺陷管理
+                        <!--<span class="label pull-right bg-color-darken">14</span>-->
+                    </span>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="../its/main.html" class="jarvismetro-tile big-cubes bg-color-orange">
+                <span class="iconbox">
+                    <i class="fa fa-desktop  fa-4x"></i>
+                    <span> 测试管理
+                        <!--<span class="label pull-right bg-color-darken">14</span>-->
+                    </span>
+                </span>
+            </a>
+        </li>
+
+        <li>
+            <a href="../ims/main.html#pages/knowledge.html" class="jarvismetro-tile big-cubes bg-color-red">
+                <span class="iconbox">
+                    <i class="fa fa-book fa-4x"></i>
+                    <span> 知识库
+                        <!--<span class="label pull-right bg-color-darken">14</span>-->
+                    </span>
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- END SHORTCUT AREA -->
+
+</body>
+
+<!--================================================== -->
+
+<!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script>
+
+<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+<script src="js/libs/jquery-2.0.2.min.js"></script>
+<script>
+    if (!window.jQuery) {
+        document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+    }
+</script>
+
+<script src="js/libs/jquery-ui-1.10.3.min.js"></script>
+<script>
+    if (!window.jQuery.ui) {
+        document.write('<script src="js/libs/jquery-ui-1.10.3.min.js"><\/script>');
+    }
+</script>
+
+<!-- JS TOUCH : include this plugin for mobile drag / drop touch events
+<script src="js/plugin/jquery-touch/jquery.ui.touch-punch.min.js"></script> -->
+
+<!-- BOOTSTRAP JS -->
+<script src="js/bootstrap/bootstrap.min.js"></script>
+
+<!-- CUSTOM NOTIFICATION -->
+<script src="js/notification/SmartNotification.min.js"></script>
+
+<!-- JARVIS WIDGETS -->
+<script src="js/smartwidgets/jarvis.widget.min.js"></script>
+
+<!-- EASY PIE CHARTS -->
+<script src="js/plugin/easy-pie-chart/jquery.easy-pie-chart.min.js"></script>
+
+<!-- SPARKLINES -->
+<script src="js/plugin/sparkline/jquery.sparkline.min.js"></script>
+
+<!-- JQUERY VALIDATE -->
+<script src="js/plugin/jquery-validate/jquery.validate.min.js"></script>
+
+<!-- JQUERY MASKED INPUT -->
+<script src="js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+
+<!-- JQUERY SELECT2 INPUT -->
+<script src="js/plugin/select2/select2.min.js"></script>
+
+<!-- JQUERY UI + Bootstrap Slider -->
+<script src="js/plugin/bootstrap-slider/bootstrap-slider.min.js"></script>
+
+<!-- browser msie issue fix -->
+<script src="js/plugin/msie-fix/jquery.mb.browser.min.js"></script>
+
+<!-- FastClick: For mobile devices -->
+<script src="js/plugin/fastclick/fastclick.js"></script>
+
+<!--[if IE 7]>
+<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
+<![endif]-->
+
+<!-- Demo purpose only -->
+<!--<script src="js/demo.js"></script>-->
+
+<!-- MAIN APP JS FILE -->
+<script src="js/app.js"></script>
+
+</html>
